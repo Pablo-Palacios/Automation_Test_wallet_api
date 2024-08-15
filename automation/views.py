@@ -12,23 +12,23 @@ https = os.getenv('HTTPS_DEV')
 
 
 class Endpoints:
-    pin_get = "/pin/get"
-    login_post = "/auth/login"
-    onboarding_validate_post = "/onboarding/validate"
-    create_user_post = "/auth/create-user"
-    biometrics_post = "/auth/biometrics"
-    search_user_onda_post = "/account/search-user-onda"
-    balance_post = "/account/get-balance"
-    update_balance_post = "/account/update-balance"
-    validate_cuit_post = "/auth/validate-cuil"
+    pin_get = "get"
+    login_post = "login"
+    onboarding_validate_post = "validate"
+    create_user_post = "create-user"
+    biometrics_post = "/biometrics"
+    search_user_onda_post = "/search-user-onda"
+    balance_post = "/get-balance"
+    update_balance_post = "/update-balance"
+    validate_cuit_post = "/validate-cuil"
     search_coelsa_post = "/account/search-user-coelsa"
     get_profile_post = "/profile/get-profile"
-    p2p_send_post = "/p2p/p2p-send"
-    get_transactions_post= "/transactions/get-transaction"
-    get_all_transactions_post = "/transactions/get-all-transactions"
-    change_alias_post = "/profile/change-alias"
-    transfer_external_send_post = "/transfer/send"
-    password_restore_post = "/password/restore"
+    p2p_send_post = "/p2p-send"
+    get_transactions_post= "/get-transaction"
+    get_all_transactions_post = "/get-all-transactions"
+    change_alias_post = "/profile/"
+    transfer_external_send_post = "/transfer"
+    password_restore_post = "/restore"
 
 
 
