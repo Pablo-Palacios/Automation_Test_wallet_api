@@ -10,23 +10,7 @@ def test_first_step_biometric():
     front_dni = biometric_validate_frist_step(device_id,cuil,code_base64_front_dni())
     print(front_dni)
 
-    # time.sleep(30)
-    # back_dni = biometric_validate_second_step(device_id,code_base64_back_dni())
-    # print(back_dni)
 
-    # status = back_dni["status"]["status_code"]
-
-
-    # if status == 400: 
-    #     # front_dni = biometric_validate_frist_step(device_id,cuil,code_base64_front_dni())
-    #     # print(front_dni)
-    #     time.sleep(30)
-    #     back_dni = biometric_validate_second_step(device_id,code_base64_back_dni())
-    #     print(back_dni)
-
-    # time.sleep(30)
-    # face_img = biometric_validate_third_step(device_id,code_base64_face_img())
-    # print(face_img)
 
 def test_second_step_biometric():
     back_dni = biometric_validate_second_step(device_id,code_base64_back_dni())

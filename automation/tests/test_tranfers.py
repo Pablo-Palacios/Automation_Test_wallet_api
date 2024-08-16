@@ -71,57 +71,50 @@ class Transf(TestCase):
 
         self.assertEqual(float(debit), float(balance_send_new), "No se desconto la plata en la cuenta debit")
         self.assertEqual(float(credit), float(balance_in_new), "No se impacto la plata en la cuenta credit")
-        #print(response_p2p)
-        #for item in response_p2p:
-        #     if isinstance(item, dict) and 'response' in item:
-        #         mjs = item["response"]["message"]
-        #         self.assertEqual(mjs, 'Transfer successful')
-        #     elif item:
-        #         self.assertEqual(item, 201, "Tranfers dropp")
-
+        
         trx = Query_db.p2p_trx()
         estado = get_transactions(token,trx)
         print(estado.json())
-        #     for item in estado.json():
-        #             if isinstance(item, dict) and 'response' in item:
-        #                 response = item["response"]
-        #                 assert 'trx_reference' in response
-        #                 status = response["status"]["status_code"]
-        #                 self.assertEqual(status,200, "No trajo la transactions")
+        for item in estado.json():
+                    if isinstance(item, dict) and 'response' in item:
+                        response = item["response"]
+                        assert 'trx_reference' in response
+                        status = response["status"]["status_code"]
+                        self.assertEqual(status,200, "No trajo la transactions")
     
-    # def test_p2p_centavos(self):
-    #     login_data = login_in()
-    #     token = login_data["token"]
-    #     email= login_data["email"]
-    #     amount = 0.35
-    #     to_email = Query_db.get_last_email_client()
-    #     balance_send = Query_db.get_balance_to_email(email)
-    #     balance_in = Query_db.get_balance_to_email(to_email)
-    #     #print(balance_send)
-    #     #print(balance_in)
-    #     send_p2p = p2p_send(token,email, to_email, amount)
-    #     response_p2p = send_p2p.json()
-    #     balance_send_new = Query_db.get_balance_to_email(email)
-    #     balance_in_new = Query_db.get_balance_to_email(to_email)
-    #     #print(balance_send_new)
-    #     #print(balance_in_new)
-    #     #print(response_p2p)
-    #     for item in response_p2p:
-    #         if isinstance(item, dict) and 'response' in item:
-    #             mjs = item["response"]["message"]
-    #             self.assertEqual(mjs, 'Transfer successful')
-    #         elif item:
-    #             self.assertEqual(item, 201, "Tranfers dropp")
+    def test_p2p_centavos(self):
+        login_data = login_in()
+        token = login_data["token"]
+        email= login_data["email"]
+        amount = 0.35
+        to_email = Query_db.get_last_email_client()
+        balance_send = Query_db.get_balance_to_email(email)
+        balance_in = Query_db.get_balance_to_email(to_email)
+        #print(balance_send)
+        #print(balance_in)
+        send_p2p = p2p_send(token,email, to_email, amount)
+        response_p2p = send_p2p.json()
+        balance_send_new = Query_db.get_balance_to_email(email)
+        balance_in_new = Query_db.get_balance_to_email(to_email)
+        #print(balance_send_new)
+        #print(balance_in_new)
+        #print(response_p2p)
+        for item in response_p2p:
+            if isinstance(item, dict) and 'response' in item:
+                mjs = item["response"]["message"]
+                self.assertEqual(mjs, 'Transfer successful')
+            elif item:
+                self.assertEqual(item, 201, "Tranfers dropp")
 
-    #         trx = Query_db.p2p_trx()
-    #         estado = get_transactions(token,trx)
-    #         json_estado = estado.json()
-    #         for item in json_estado:
-    #                 if isinstance(item, dict) and 'response' in item:
-    #                     response = item["response"]
-    #                     assert 'trx_reference' in response
-    #                     status = response["status"]["status_code"]
-    #                     self.assertEqual(status,200, "No trajo la transactions")
+            trx = Query_db.p2p_trx()
+            estado = get_transactions(token,trx)
+            json_estado = estado.json()
+            for item in json_estado:
+                    if isinstance(item, dict) and 'response' in item:
+                        response = item["response"]
+                        assert 'trx_reference' in response
+                        status = response["status"]["status_code"]
+                        self.assertEqual(status,200, "No trajo la transactions")
 
     def test_all_transactions_user(self):
         login_data = login_in()
@@ -217,46 +210,44 @@ class Transf(TestCase):
         cvu_data = cvu_random()
         alias = cvu_data["alias"]
         
-        #email = "juliesparks@gmail.com"
-        #alias = Query_db.get_last_alias()
 
         ammount = 200
 
         balance_send = Query_db.get_balance_to_email(email)
-        #cvu = Query_db.get_cvu_with_alias(alias)
+        cvu = Query_db.get_cvu_with_alias(alias)
         print(f"balance user {balance_send}")
-        #balance_in = Query_db.get_balance_to_cvu(cvu)
-        #print(f"balance inicial user {balance_in}")
+        balance_in = Query_db.get_balance_to_cvu(cvu)
+        print(f"balance inicial user {balance_in}")
 
        
         send_transfer = transfer_external_send_alias(token,alias,ammount)
         response_transfer_send = send_transfer.json()
 
         
-                #print(balance_send_new)
+        print(balance_send_new)
         print("Send transfers")
         print(f"to_alias: {alias}")
 
         time.sleep(30)
         balance_send_new = Query_db.get_balance_to_email(email)
         if balance_send != balance_send_new:
-                            #resta= balance_send - balance_send_new
-                            #print(f" se resto {resta} de la cuenta {email}")
+                            resta= balance_send - balance_send_new
+                            print(f" se resto {resta} de la cuenta {email}")
                             time.sleep(30)
-                            #trx = Query_db.transaction_trx(cvu)
+                            trx = Query_db.transaction_trx(cvu)
                             estado = get_all_transactions(token)
                             body_estado = estado.json()
                             print(body_estado)
                             response =body_estado["trx_status"]
                             self.assertEqual(response, "done", "No se acepto la transferencia automatica")
                                     
-                            #balance_in_new = Query_db.get_balance_to_cvu(cvu)
-                            #print(f"Saldo final user credit: {balance_in_new}")
+                            balance_in_new = Query_db.get_balance_to_cvu(cvu)
+                            print(f"Saldo final user credit: {balance_in_new}")
                             resta_debit = Decimal(balance_send) - Decimal(ammount)
-                            #suma_credit = Decimal(balance_in) + Decimal(ammount)
-                            #print(float(suma_credit))
+                            suma_credit = Decimal(balance_in) + Decimal(ammount)
+                            print(float(suma_credit))
                             self.assertEqual(float(resta_debit), float(balance_send_new), "No se desconto la plata de la cuenta debit")
-                            #self.assertEqual(float(suma_credit), float(balance_in_new), "No impacto el dinero en la cuenta credit")
+                            self.assertEqual(float(suma_credit), float(balance_in_new), "No impacto el dinero en la cuenta credit")
                             
         else:
             print("NO se resto el monto enviado de la cuenta origen")
@@ -266,15 +257,15 @@ class Transf(TestCase):
         login_data = login_in()
         token = login_data["token"]
         email= login_data["email"]
-        #email = "jillreed@gmail.com"
+        email = "jillreed@gmail.com"
         cbu_data = cbu_random()
         cbu = cbu_data["cbu"]
         ammount = 22.38
 
         balance_send = Query_db.get_balance_to_email(email)
-        #print(balance_send)
-        #balance_in = Query_db.get_balance_to_cvu(cvu)
-        #print(f"balance inicial user credit {balance_in}")
+        print(balance_send)
+        balance_in = Query_db.get_balance_to_cvu(cvu)
+        print(f"balance inicial user credit {balance_in}")
         send_transfer = transfer_external_send_cvu(token,cbu,ammount)
         response_transfer_send = send_transfer.json()
         print(response_transfer_send)
@@ -282,13 +273,13 @@ class Transf(TestCase):
         
 
         balance_send_new = Query_db.get_balance_to_email(email)
-                        #print(balance_send_new)
+        print(balance_send_new)
         print("Send transfers")
         print(f"to_cbu: {cbu}")
         print(balance_send_new)
         if balance_send != balance_send_new:
-                            #resta= balance_send - balance_send_new
-                            #print(f" se resto {resta} de la cuenta {email}")
+                            resta= balance_send - balance_send_new
+                            print(f" se resto {resta} de la cuenta {email}")
                             time.sleep(30)
                             trx = Query_db.transaction_trx(cbu)
                             estado = get_transactions(token,trx)
@@ -300,15 +291,15 @@ class Transf(TestCase):
                             balance_in_new = Query_db.get_balance_to_cvu(cbu)
                             print(f"Saldo final user credit: {balance_in_new}")
                             resta_debit = Decimal(balance_send) - Decimal(ammount)
-                            #suma_credit = Decimal(balance_in) + Decimal(ammount)
-                            #print(float(suma_credit))
+                            suma_credit = Decimal(balance_in) + Decimal(ammount)
+                            print(float(suma_credit))
                             self.assertEqual(float(resta_debit), float(balance_send_new), "No se desconto la plata de la cuenta debit")
-                            #self.assertEqual(float(suma_credit), float(balance_in_new), "No impacto el dinero en la cuenta credit")
-                            # if balance_in != balance_in_new:
-                            #     print(f"""
-                            #             - inicio balance de cuenta credit: {balance_in} \n
-                            #             - impacto de balance actualizado cuenta credit: {balance_in_new} \n
-                            #             - status transfer: {response}""")
+                            self.assertEqual(float(suma_credit), float(balance_in_new), "No impacto el dinero en la cuenta credit")
+                            if balance_in != balance_in_new:
+                                print(f"""
+                                        - inicio balance de cuenta credit: {balance_in} \n
+                                        - impacto de balance actualizado cuenta credit: {balance_in_new} \n
+                                        - status transfer: {response}""")
                     
         else:
             print("NO se resto el monto enviado de la cuenta origen")
@@ -322,9 +313,9 @@ class Transf(TestCase):
         ammount = 22.38
 
         balance_send = Query_db.get_balance_to_email(email)
-        #print(balance_send)
-        #balance_in = Query_db.get_balance_to_cvu(cvu)
-        #print(f"balance inicial user credit {balance_in}")
+        print(balance_send)
+        balance_in = Query_db.get_balance_to_cvu(cvu)
+        print(f"balance inicial user credit {balance_in}")
         send_transfer = transfer_external_send_cvu(token,cvu,ammount)
         response_transfer_send = send_transfer.json()
         print(response_transfer_send)
@@ -332,13 +323,13 @@ class Transf(TestCase):
         
 
         balance_send_new = Query_db.get_balance_to_email(email)
-                        #print(balance_send_new)
+        print(balance_send_new)
         print("Send transfers")
         print(f"to_cvu: {cvu}")
         print(balance_send_new)
         if balance_send != balance_send_new:
-                            #resta= balance_send - balance_send_new
-                            #print(f" se resto {resta} de la cuenta {email}")
+                            resta= balance_send - balance_send_new
+                            print(f" se resto {resta} de la cuenta {email}")
                             time.sleep(30)
                             trx = Query_db.transaction_trx(cvu)
                             estado = get_transactions(token,trx)
@@ -350,15 +341,15 @@ class Transf(TestCase):
                             balance_in_new = Query_db.get_balance_to_cvu(cvu)
                             print(f"Saldo final user credit: {balance_in_new}")
                             resta_debit = Decimal(balance_send) - Decimal(ammount)
-                            #suma_credit = Decimal(balance_in) + Decimal(ammount)
-                            #print(float(suma_credit))
+                            suma_credit = Decimal(balance_in) + Decimal(ammount)
+                            print(float(suma_credit))
                             self.assertEqual(float(resta_debit), float(balance_send_new), "No se desconto la plata de la cuenta debit")
-                            #self.assertEqual(float(suma_credit), float(balance_in_new), "No impacto el dinero en la cuenta credit")
-                            # if balance_in != balance_in_new:
-                            #     print(f"""
-                            #             - inicio balance de cuenta credit: {balance_in} \n
-                            #             - impacto de balance actualizado cuenta credit: {balance_in_new} \n
-                            #             - status transfer: {response}""")
+                            self.assertEqual(float(suma_credit), float(balance_in_new), "No impacto el dinero en la cuenta credit")
+                            if balance_in != balance_in_new:
+                                print(f"""
+                                        - inicio balance de cuenta credit: {balance_in} \n
+                                        - impacto de balance actualizado cuenta credit: {balance_in_new} \n
+                                        - status transfer: {response}""")
                     
         else:
             print("NO se resto el monto enviado de la cuenta origen")
@@ -378,26 +369,7 @@ class Transf(TestCase):
         body = {
                 "content": {
                     "operacion": {
-                        "comprador": {
-                            "cuentaVirtual": {
-                                "titular": "Daniel",
-                                "cuit": "20812332731",
-                                "cvu": "0000001700000002002820",
-                                "psp": "OndaSiempre"
-                            },
-                            "titular": "Daniel",
-                            "cuit": "20812332731",
-                            "cuenta": {
-                                "banco": "",
-                                "sucursal": "",
-                                "terminal": "",
-                                "alias": "",
-                                "cbu": "",
-                                "esTitular": 0,
-                                "titulares": [],
-                                "moneda": ""
-                            }
-                        },
+                            
                         "detalle": {
                             "concepto": "VARS",
                             "idUsuario": 0,
@@ -472,37 +444,7 @@ class Transf(TestCase):
         body = {
                 "content": {
                     "operacion": {
-                        "comprador": {
-                            "cuentaVirtual": {
-                                "titular": "Daniel",
-                                "cuit": "20812332731",
-                                "cvu": "0000001700000002002820",
-                                "psp": "OndaSiempre"
-                            },
-                            "titular": "Daniel",
-                            "cuit": "20812332731",
-                            "cuenta": {
-                                "banco": "",
-                                "sucursal": "",
-                                "terminal": "",
-                                "alias": "",
-                                "cbu": "",
-                                "esTitular": 0,
-                                "titulares": [],
-                                "moneda": ""
-                            }
-                        },
-                        "detalle": {
-                            "concepto": "VARS",
-                            "idUsuario": 0,
-                            "idComprobante": 0,
-                            "moneda": "032",
-                            "importe": 100,
-                            "devolucion": False,
-                            "importeComision": 0,
-                            "comision": 0,
-                            "descripcion": "detalle descripcion"
-                        },
+                          
                         "vendedor": {
                             "cuentaVirtual": {
                             "titular": f"{titular}",
@@ -532,7 +474,7 @@ class Transf(TestCase):
                     "preautorizado": True
                 }
         }
-        https_mocks = os.getenv('MOCKS_URL_DEV')
+        https_mocks = os.getenv('DEV')
         request = requests.post(https_mocks,json=body)
         body_request = request.json()
         coelsa_id = body_request["coelsa_id"]

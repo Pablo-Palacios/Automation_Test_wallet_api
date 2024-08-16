@@ -3,7 +3,6 @@ import uuid
 from views import onboarding_validate_send_email, onboarding_validate_cuil,onboarding_validate_code_otp_email, onboarding_validate_send_sms, onboarding_validate_code_otp_sms, create_user, login, pin, first
 from automation.lib.lib import device_models, provincias_arg
 from unittest import TestCase
-from automation.database.config import Query_db
 
 from automation.lib.main import email, password, phone, cuit, device_id
 from automation.decode.code_redi import Redis
@@ -127,61 +126,4 @@ class Auth(TestCase):
                 else:
                             print(f"se genero bien el cuil: {len(cont_cuil)}")
 
-    #         try:
-    #             for item in response_login:
-    #                 if item and 'response' in item:
-    #                     response_content = item["response"]
-    #                     sessions = response_content["sessions"]
-    #                     assert "token" in sessions
-    #                     client = response_content["client"]
-    #                     assert "document_number" in client
-    #                     assert "cvu" in client
-    #                     cvu = client["cvu"]
-    #                     assert "birth_date" in client
-    #                     assert "name" in client
-    #                     assert "last_name" in client
-    #                     assert "alias" in client
-    #                     alias = client["alias"]
-    #                     assert "cuil" in client
-    #                     cuil = client["cuil"]
-    #                     assert "email" in client
-    #                     token = sessions["token"]
-
-    #                     print(first)
-    #                     print(email)
-    #                     print(cuil)
-    #                     cont_cuil = str(cuil)
-                        
-    #                     if len(cont_cuil) > 11 or len(cont_cuil) == 12:
-    #                         print("fail cuil, mal formulado")
-    #                     else:
-    #                         print(f"se genero bien el cuil: {len(cont_cuil)}")
-    #                     alias_db = Query_db.get_alias_user_with_email(email)
-    #                     cvu_db = Query_db.get_cvu_user_with_email(email)
-    #                     #print(cvu_db)
-    #                     #print(alias_db)
-    #                     if alias_db == '' or cvu_db == '':
-    #                         print("campo alias y cvu vacios")
-                    
-    #                     else:
-
-    #                         print(f"""Alias Y cvu registrados correcto. \n
-    #                         Coinciden en db. \n
-    #                         - {cvu_db}
-    #                         - {alias_db}""") 
-
-    #                     pin_access_ok = pin(token)
-    #                     assert pin_access_ok.status_code, 200 
-    #                     response_pin_access = pin_access_ok.json()
-    #                     #print(response_pin_access)
-
-    #                     for item in response_pin_access:
-    #                         if item and 'response' in item:
-    #                             response_content = item["response"]
-    #                             assert "date" in response_content
-    #                             assert "id" in response_content
-    #                             assert "status" in response_content
-    #                             status = response_content["status"]
-    #                             assert status, "status del token en false"
-    #         except ValueError as E:
-    #             self.fail(f"Error: {E}")
+ 

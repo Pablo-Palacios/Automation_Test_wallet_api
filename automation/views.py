@@ -8,27 +8,27 @@ load_dotenv()
 faker = Faker()
 first = faker.first_name()
 
-https = os.getenv('HTTPS_DEV')
+https = os.getenv('DEV')
 
 
 class Endpoints:
-    pin_get = "get"
-    login_post = "login"
-    onboarding_validate_post = "validate"
-    create_user_post = "create-user"
-    biometrics_post = "/biometrics"
-    search_user_onda_post = "/search-user-onda"
-    balance_post = "/get-balance"
-    update_balance_post = "/update-balance"
-    validate_cuit_post = "/validate-cuil"
-    search_coelsa_post = "/account/search-user-coelsa"
-    get_profile_post = "/profile/get-profile"
-    p2p_send_post = "/p2p-send"
-    get_transactions_post= "/get-transaction"
-    get_all_transactions_post = "/get-all-transactions"
-    change_alias_post = "/profile/"
-    transfer_external_send_post = "/transfer"
-    password_restore_post = "/restore"
+    pin_get = "endpoint"
+    login_post = "endpoint"
+    onboarding_validate_post = "endpoint"
+    create_user_post = "endpoint"
+    biometrics_post = "endpoint"
+    search_user_onda_post = "endpoint"
+    balance_post = "endpoint"
+    update_balance_post = "endpoint"
+    validate_cuit_post = "endpoint"
+    search_coelsa_post = "endpoint"
+    get_profile_post = "endpoint"
+    p2p_send_post = "endpoint"
+    get_transactions_post= "endpoint"
+    get_all_transactions_post = "endpoint"
+    change_alias_post = "endpoint"
+    transfer_external_send_post = "endpoint"
+    password_restore_post = "endpoint"
 
 
 

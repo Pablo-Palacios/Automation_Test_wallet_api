@@ -11,8 +11,7 @@ device_id = ""
 
 # LOGIN 
 def login_in():
-        #email_last = Query_db.get_last_email_client()
-        email_last = ''
+        email_last = Query_db.get_last_email_client() 
         login_user = login(email_last, password)
         response_login = login_user.json()
         
@@ -144,8 +143,7 @@ class UserOnda(TestCase):
     def test_search_cvu_coelsa(self):
         login_data = login_in()
         token = login_data["token"]
-        #cvu = login_data["cvu"]
-        cvu = "0000001700000002002714"
+        cvu = login_data["cvu"] 
         email = login_data["email"]
 
 
