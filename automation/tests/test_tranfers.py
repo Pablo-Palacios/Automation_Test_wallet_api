@@ -264,7 +264,7 @@ class Transf(TestCase):
 
         balance_send = Query_db.get_balance_to_email(email)
         print(balance_send)
-        balance_in = Query_db.get_balance_to_cvu(cvu)
+        balance_in = Query_db.get_balance_to_cvu(cbu)
         print(f"balance inicial user credit {balance_in}")
         send_transfer = transfer_external_send_cvu(token,cbu,ammount)
         response_transfer_send = send_transfer.json()
