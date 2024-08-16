@@ -363,7 +363,7 @@ def p2p_send(token,to_email):
             }
         }
 
-    resp_send = requests.post("https://endpoint.dev.siempreondav2.com/v2/p2p/p2p-send", headers=headers,json=send_p2p)
+    resp_send = requests.post(https +Endpoints.balance_post , headers=headers,json=send_p2p)
     return resp_send.json()
 
 
@@ -479,5 +479,5 @@ def mock_arg_cuentas(id,cbu,amount):
         }
     }
     
-    request = requests.post("https://plug.dev.siempreondav2.com/coelsa-endpoint/server/debin/AvisoCVU", json=body)
+    request = requests.post(https + Endpoints.search_coelsa_post, json=body)
     return request
