@@ -1,18 +1,17 @@
 import psycopg2
 from faker import Faker
 import uuid
-from dotenv import load_dotenv
 import os
 
-load_dotenv()
+
 
 # Confi database 
 class Query_db:
         
-        host = os.getenv('HOST_DEV')
-        database = os.getenv('DATABASE')
-        user = os.getenv('USER')
-        password = os.getenv('PASSWORD')
+        host = ('HOST_DEV')
+        database = ('DATABASE')
+        user = "********"
+        password = ('PASSWORD')
 
         conn = psycopg2.connect(
                 host=host,
@@ -135,7 +134,7 @@ class Query_db:
                         cursor = Query_db.conn.cursor()
                         cursor.execute(f""" SELECT cvu
                                        FROM "walletClients".clients
-                                       WHERE client_id = (SELECT MAX(client_id) FROM "walletClients".clients);""")
+                                       WHERE client_id = (SELECT MAX(client_id) FROM "walletClients".clients;""")
                         result = cursor.fetchone()
                         
                         cursor.close()
@@ -155,13 +154,13 @@ class Query_db:
         def get_alias_user_with_email(email):
                         cursor = Query_db.conn.cursor()
        
-                        cursor.execute(f""" SELECT c.alias
+                        cursor.execute(f"""SELECT *
                                        FROM "walletClients".users AS u
                                        INNER JOIN "walletClients".clients AS c ON c.user_id = u.user_id
                                        WHERE u.email = '{email}';""")
                         result = cursor.fetchone()
-                        cursor.close()
-                        return result[0] if result else None
+                        #cursor.close()
+                        return result
 
         def get_cvu_with_alias(alias):
                 cursor = Query_db.conn.cursor()
@@ -274,52 +273,102 @@ class Query_db:
                                INNER JOIN "walletTransactions".inbounds as i ON i.transaction_id = t.transaction_id
                                WHERE i.coelsa_id = '{txr}'
                                 """)
+                
+        def get_cuil_with_email(email):
+                cursor = Query_db.conn.cursor()
+                cursor.execute(f""" SELECT cuil
+                                       FROM "walletClients".users AS u
+                                       INNER JOIN "walletClients".clients AS c ON c.user_id = u.user_id
+                                       WHERE u.email = '{email}';""")
+                cuil = cursor.fetchone()
+
+                return cuil[0]
+        
+        def get_cbu_bfsa_with_email(email):
+                cursor = Query_db.conn.cursor()
+                cursor.execute(f""" SELECT cbu
+                                    FROM "walletClients".cbus_bfsa AS c 
+                                    INNER JOIN "walletClients".users AS u ON u.user_id = c.user_id
+                                    WHERE u.email = '{email}';
+                                """)
+                cbu = cursor.fetchone()
+                return cbu[0]
+        
+        def get_cbu_bfsa_is_active_with_email(email):
+                cursor = Query_db.conn.cursor()
+                cursor.execute(f""" SELECT is_active
+                                    FROM "walletClients".cbus_bfsa AS c 
+                                    INNER JOIN "walletClients".users AS u ON u.user_id = c.user_id
+                                    WHERE u.email = '{email}';
+                                """)
+                boolean = cursor.fetchone()
+
+                return boolean[0]
+        
+        def get_branch_info_with_name(id):
+                cursor = Query_db.conn.cursor()
+                cursor.execute(f"""SELECT branch_name FROM "walletClients".branches WHERE branch_id = '{id}'""")
+                data = cursor.fetchone()
+                return data[0]
+        
+        def get_last_branch_id():
+                cursor = Query_db.conn.cursor()
+                cursor.execute("""SELECT branch_id, commerce_id, branch_name 
+                               FROM "walletClients".branches
+                               WHERE branch_id = (SELECT MAX(branch_id)FROM "walletClients".branches)""")
+                data = cursor.fetchone()
+                return data
+        
+        def get_last_checkout_id():
+                cursor = Query_db.conn.cursor()
+                cursor.execute("""SELECT checkout_id, checkout_name,checkout_qr,branch_id 
+                               FROM "walletClients".checkouts
+                               WHERE checkout_id = (SELECT MAX(checkout_id)FROM "walletClients".checkouts)""")
+                data = cursor.fetchone()
+                return data
+        
+        def get_name_checkout_id(id):
+                cursor = Query_db.conn.cursor()
+                cursor.execute(f"""SELECT checkout_name
+                               FROM "walletClients".checkouts
+                               WHERE checkout_id = '{id}'""")
+                data = cursor.fetchone()
+                return data[0]
+        
+        def get_checkout_info_with_name(id):
+                cursor = Query_db.conn.cursor()
+                cursor.execute(f"""SELECT checkout_name FROM "walletClients".checkouts WHERE checkout_id = '{id}'""")
+                data = cursor.fetchone()
+                return data[0]
+
+        def get_last_repre_id():
+                cursor = Query_db.conn.cursor()
+                cursor.execute("""SELECT representative_id, representative_type, user_id,commerce_id,role
+                               FROM "walletClients".representatives 
+                               WHERE representative_id = (SELECT MAX(representative_id)FROM "walletClients".representatives)""")
+                data = cursor.fetchone()
+                return data
+        def get_device_with_email(email):
+                cursor = Query_db.conn.cursor()
+                cursor.execute(f"""SELECT d.device_tag FROM "walletClients".devices d 
+                                INNER JOIN "walletClients".devices_user du ON du.device_id = d.device_id 
+                                INNER JOIN "walletClients".users u ON u.user_id = du.user_id 
+                                WHERE u.email = '{email}'""")
+                data = cursor.fetchone()
+                return data
+        def get_user_id_email(email):
+                cursor = Query_db.conn.cursor()
+                cursor.execute(f"""SELECT u.user_id FROM "walletClients".users u 
+                                WHERE u.email = '{email}'""")
+                data = cursor.fetchone()
+                return data[0]
+        
+        def get_phone_with_email(email):
+                cursor = Query_db.conn.cursor()
+                cursor.execute(f"""SELECT c.phone_number FROM "walletClients".clients c
+                               INNER JOIN "walletClients".users u ON u.user_id = c.user_id
+                                WHERE u.email = '{email}'""")
+                data = cursor.fetchone()
+                return data
         
 
-
-
-
-faker = Faker()
-email = 'aguusstefanini@gmail.com'
-cvu2 = '0000001700000002002578'
-number = '543516619221'
-cvu = '0000001700000002002530'
-alias = "PTEST.44.ONDA"
-
-#print(Query_db.get_last_email_client())
-
-#print(Query_db.p2p_trx())
-
-#print(Query_db.get_code_email_register(email))
-
-# trasn = uuid.uuid1()
-# print(trasn)
-# last_cvu = Query_db.get_last_cvu()
-# print(last_cvu)
-#print(Query_db.transaction_trx(cvu))
-# trx= Query_db.get_last_transaction_trx()
-# print(Query_db.get_transaction_status(trx))
-#phone = int("54351" + str(faker.random_number(digits=7)))
-#print(phone)
-# alias = 'GCOOK.21.ONDA'
-# # a = Query_db.tb_users.get_one_otp_code()
-#print(Query_db.get_balance_to_cvu(cvu2))
-#print(Query_db.get_balance_to_cvu(cvu))
-#print(Query_db.get_balance_to_email(email))
-
-
-#print(Query_db.get_last_email_client())
-#print(Query_db.get_last_cvu())
-
-
-#print(Query_db.get_phoneCode(number))
-#print(Query_db.get_alias_user_with_email(email))
-# dni = 24880627
-#print(Query_db.get_alias_and_cvu_user_with_email(email))
-#print(Query_db.get_data_with_alias(alias))
-#print(Query_db.get_last_alias())
-#print(Query_db.get_emailCode(email))
-
-#print(Query_db.get_deviceId_to_email(email))
-
-#print(Query_db.get_alias_with_max())
