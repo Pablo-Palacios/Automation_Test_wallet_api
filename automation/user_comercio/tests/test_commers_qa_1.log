@@ -1,0 +1,15 @@
+2024-09-30 10:27:54,707 - test_logger_commers - INFO - Runing test: test_create_all_step_monotributista
+2024-09-30 10:28:02,365 - test_logger_commers - INFO - response_create_branch: {'code': 401, 'message': 'Unauthorized', 'status': {'status_code': 401}, 'data': None}
+2024-10-02 09:33:09,472 - test_logger_commers - INFO - Runing test: test_create_all_step_monotributista
+2024-10-02 09:33:14,034 - test_logger_commers - INFO - response_create_branch: {'code': 401, 'message': 'Unauthorized', 'status': {'status_code': 401}, 'data': None}
+2024-10-02 09:37:25,283 - test_logger_commers - INFO - Runing test: test_create_all_step_monotributista
+2024-10-02 09:37:29,302 - test_logger_commers - INFO - response_create_branch: {'code': 401, 'message': 'Unauthorized', 'status': {'status_code': 401}, 'data': None}
+2024-10-02 09:39:21,646 - test_logger_commers - INFO - Runing test: test_create_all_step_monotributista
+2024-10-02 09:39:28,794 - test_logger_commers - INFO - response_create_branch: {'code': 401, 'message': 'Unauthorized', 'status': {'status_code': 401}, 'data': None}
+2024-10-02 09:41:37,463 - test_logger_commers - INFO - Runing test: test_create_all_step_monotributista
+2024-10-02 09:41:41,932 - test_logger_commers - INFO - response_create_branch: {'code': 400, 'message': 'null value in column "commerce_id" of relation "branches" violates not-null constraint\nDETAIL:  Failing row contains (11, null, branch 821, 1, 1727827200, 1727827200, f).\n', 'status': {'status_code': 400}, 'data': None}
+2024-10-11 20:16:35,698 - test_logger_commers - INFO - Runing test: test_create_all_step_monotributista
+2024-10-11 20:19:03,156 - test_logger_commers - INFO - Runing test: test_create_all_step_monotributista
+2024-10-11 20:19:07,230 - test_logger_commers - INFO - response_create_branch: {'code': 400, 'message': 'null value in column "commerce_id" of relation "branches" violates not-null constraint\nDETAIL:  Failing row contains (47, null, branch 452, 2, 1728604800, 1728604800, f).\n', 'status': {'status_code': 400}, 'data': None}
+2024-10-11 21:19:24,597 - test_logger_commers - INFO - Runing test: test_create_all_step_monotributista
+2024-10-11 21:19:28,468 - test_logger_commers - INFO - response_create_branch: {'code': 403, 'message': 'Role access denied', 'status': {'status_code': 403}, 'data': None}

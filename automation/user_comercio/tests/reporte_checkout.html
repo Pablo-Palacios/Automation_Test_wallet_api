@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title id="head-title">reporte_checkout.html</title>
+      <link href="assets/style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <h1 id="title">reporte_checkout.html</h1>
+    <p>Report generated on 25-Sep-2024 at 15:29:22 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a>
+        v4.1.1</p>
+    <div id="environment-header">
+      <h2>Environment</h2>
+    </div>
+    <table id="environment"></table>
+    <!-- TEMPLATES -->
+      <template id="template_environment_row">
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </template>
+    <template id="template_results-table__body--empty">
+      <tbody class="results-table-row">
+        <tr id="not-found-message">
+          <td colspan="4">No results found. Check the filters.</th>
+        </tr>
+    </template>
+    <template id="template_results-table__tbody">
+      <tbody class="results-table-row">
+        <tr class="collapsible">
+        </tr>
+        <tr class="extras-row">
+          <td class="extra" colspan="4">
+            <div class="extraHTML"></div>
+            <div class="media">
+              <div class="media-container">
+                  <div class="media-container__nav--left"><</div>
+                  <div class="media-container__viewport">
+                    <img src="" />
+                    <video controls>
+                      <source src="" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="media-container__nav--right">></div>
+                </div>
+                <div class="media__name"></div>
+                <div class="media__counter"></div>
+            </div>
+            <div class="logwrapper">
+              <div class="logexpander"></div>
+              <div class="log"></div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </template>
+    <!-- END TEMPLATES -->
+    <div class="summary">
+      <div class="summary__data">
+        <h2>Summary</h2>
+        <div class="additional-summary prefix">
+        </div>
+        <p class="run-count">19 tests took 00:01:12.</p>
+        <p class="filter">(Un)check the boxes to filter the results.</p>
+        <div class="summary__reload">
+          <div class="summary__reload__button hidden" onclick="location.reload()">
+            <div>There are still tests running. <br />Reload this page to get the latest results!</div>
+          </div>
+        </div>
+        <div class="summary__spacer"></div>
+        <div class="controls">
+          <div class="filters">
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="failed" />
+            <span class="failed">8 Failed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="passed" />
+            <span class="passed">11 Passed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="skipped" disabled/>
+            <span class="skipped">0 Skipped,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xfailed" disabled/>
+            <span class="xfailed">0 Expected failures,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xpassed" disabled/>
+            <span class="xpassed">0 Unexpected passes,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="error" disabled/>
+            <span class="error">0 Errors,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="rerun" disabled/>
+            <span class="rerun">0 Reruns</span>
+          </div>
+          <div class="collapse">
+            <button id="show_all_details">Show all details</button>&nbsp;/&nbsp;<button id="hide_all_details">Hide all details</button>
+          </div>
+        </div>
+      </div>
+      <div class="additional-summary summary">
+      </div>
+      <div class="additional-summary postfix">
+      </div>
+    </div>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable" data-column-type="result">Result</th>
+          <th class="sortable" data-column-type="testId">Test</th>
+          <th class="sortable" data-column-type="duration">Duration</th>
+          <th>Links</th>
+        </tr>
+      </thead>
+    </table>
+  </body>
+  <footer>
+    <div id="data-container" data-jsonblob="{&#34;environment&#34;: {&#34;Python&#34;: &#34;3.11.9&#34;, &#34;Platform&#34;: &#34;Linux-6.8.0-40-generic-x86_64-with-glibc2.35&#34;, &#34;Packages&#34;: {&#34;pytest&#34;: &#34;7.4.4&#34;, &#34;pluggy&#34;: &#34;1.5.0&#34;}, &#34;Plugins&#34;: {&#34;xdist&#34;: &#34;3.5.0&#34;, &#34;Faker&#34;: &#34;19.13.0&#34;, &#34;metadata&#34;: &#34;3.1.1&#34;, &#34;reportportal&#34;: &#34;5.4.1&#34;, &#34;sugar&#34;: &#34;0.9.7&#34;, &#34;csv&#34;: &#34;3.0.0&#34;, &#34;html&#34;: &#34;4.1.1&#34;}}, &#34;tests&#34;: {&#34;test_checkout.py::Checkout::test_can_delete_checkout_to_other_comercio&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;test_checkout.py::Checkout::test_can_delete_checkout_to_other_comercio&#34;, &#34;duration&#34;: &#34;00:00:05&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_checkout.py::Checkout::test_can_delete_checkout_to_other_comercio&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:05&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;test_checkout.Checkout testMethod=test_can_delete_checkout_to_other_comercio&amp;gt;\n\n    def test_can_delete_checkout_to_other_comercio(self):\n        cuit = 30112223335\n        email = &amp;quot;pers_jur_pablo1@gmail.com&amp;quot;\n        password = &amp;quot;124578&amp;quot;\n        log_1 = login_in_whit_email_comercio(cuit,email,password)\n        token = log_1[&amp;quot;token&amp;quot;]\n    \n        self.logger.info(&amp;quot;Runing test: test_can_delete_checout_to_other_comercio&amp;quot;)\n        name_branch = &amp;quot;test_branch_&amp;quot; + str(faker.random_number(digits=3))\n        create_ = branch_create(token,name_branch)\n        body_create_ = create_.json()\n        branch_id = body_create_[&amp;quot;data&amp;quot;][&amp;quot;branch_id&amp;quot;]\n    \n        name_checkout = &amp;quot;test_caja_&amp;quot; + str(faker.random_number(digits=3))\n        create = checkout_create(token,name_checkout,branch_id)\n        body_create = create.json()\n        print(body_create)\n        checkout_id = body_create[&amp;quot;data&amp;quot;][&amp;quot;checkout_id&amp;quot;]\n    \n        cuit_ = 30222333115\n        email_ = &amp;quot;pers_jur_pablo2@gmail.com&amp;quot;\n        password_ = &amp;quot;124578&amp;quot;\n        log_2= login_in_whit_email_comercio(cuit_,email_,password_)\n        token_ = log_2[&amp;quot;token&amp;quot;]\n    \n        delete = checkout_delete(token_,checkout_id,branch_id)\n        body_delete = delete.json()\n        self.logger.info(f&amp;quot;response: {body_delete}&amp;quot;)\n        print(body_delete)\n&amp;gt;       status = body_delete[&amp;quot;status&amp;quot;][&amp;quot;status_code&amp;quot;]\nE       KeyError: &amp;#x27;status&amp;#x27;\n\ntest_checkout.py:698: KeyError\n\n------------------------------ Captured log call -------------------------------\nINFO     test_logger_commers:test_checkout.py:676 Runing test: test_can_delete_checout_to_other_comercio\nINFO     test_logger_commers:test_checkout.py:696 response: {&amp;#x27;message&amp;#x27;: &amp;#x27;Internal server error&amp;#x27;}\n\n&#34;}], &#34;test_checkout.py::Checkout::test_can_delete_checout_to_other_monotribu&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;test_checkout.py::Checkout::test_can_delete_checout_to_other_monotribu&#34;, &#34;duration&#34;: &#34;00:00:05&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_checkout.py::Checkout::test_can_delete_checout_to_other_monotribu&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:05&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;test_checkout.Checkout testMethod=test_can_delete_checout_to_other_monotribu&amp;gt;\n\n    def test_can_delete_checout_to_other_monotribu(self):\n        email = &amp;quot;pers_fis_pablo2@gmail.com&amp;quot;\n        password = &amp;quot;124578&amp;quot;\n        log_1 = login_in_whit_email(email,password)\n        token = log_1[&amp;quot;token&amp;quot;]\n    \n        self.logger.info(&amp;quot;Runing test: test_can_update_to_other_user_monotribu&amp;quot;)\n        name_branch = &amp;quot;test_branch_&amp;quot; + str(faker.random_number(digits=3))\n        create_ = branch_create(token,name_branch)\n        body_create_ = create_.json()\n        branch_id = body_create_[&amp;quot;data&amp;quot;][&amp;quot;branch_id&amp;quot;]\n    \n        name_checkout = &amp;quot;test_caja_&amp;quot; + str(faker.random_number(digits=3))\n        create = checkout_create(token,name_checkout,branch_id)\n        body_create = create.json()\n        print(body_create)\n        checkout_id = body_create[&amp;quot;data&amp;quot;][&amp;quot;checkout_id&amp;quot;]\n    \n        email_ = &amp;quot;pers_fis_pablo1@gmail.com&amp;quot;\n        password_ = &amp;quot;124578&amp;quot;\n        log_2= login_in_whit_email(email_,password_)\n        token_ = log_2[&amp;quot;token&amp;quot;]\n    \n        delete = checkout_delete(token_,checkout_id,branch_id)\n        body_delete = delete.json()\n        self.logger.info(f&amp;quot;response: {body_delete}&amp;quot;)\n        print(body_delete)\n        status = body_delete[&amp;quot;status&amp;quot;]\n        if status == 200:\n&amp;gt;           self.fail(f&amp;quot;{body_delete}&amp;quot;)\nE           AssertionError: {&amp;#x27;status&amp;#x27;: 200, &amp;#x27;message&amp;#x27;: &amp;#x27;Checkout deleted successfully.&amp;#x27;, &amp;#x27;data&amp;#x27;: None}\n\ntest_checkout.py:663: AssertionError\n\n------------------------------ Captured log call -------------------------------\nINFO     test_logger_commers:test_checkout.py:640 Runing test: test_can_update_to_other_user_monotribu\nINFO     test_logger_commers:test_checkout.py:659 response: {&amp;#x27;status&amp;#x27;: 200, &amp;#x27;message&amp;#x27;: &amp;#x27;Checkout deleted successfully.&amp;#x27;, &amp;#x27;data&amp;#x27;: None}\n\n&#34;}], &#34;test_checkout.py::Checkout::test_can_get_details_to_other_user_comercio&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;test_checkout.py::Checkout::test_can_get_details_to_other_user_comercio&#34;, &#34;duration&#34;: &#34;00:00:04&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_checkout.py::Checkout::test_can_get_details_to_other_user_comercio&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:04&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;test_checkout.Checkout testMethod=test_can_get_details_to_other_user_comercio&amp;gt;\n\n    def test_can_get_details_to_other_user_comercio(self):\n        cuit = 30112223335\n        email = &amp;quot;pers_jur_pablo1@gmail.com&amp;quot;\n        password = &amp;quot;124578&amp;quot;\n        log_1 = login_in_whit_email_comercio(cuit,email,password)\n        token = log_1[&amp;quot;token&amp;quot;]\n    \n    \n    \n        self.logger.info(&amp;quot;Runing test: test_can_get_details_to_other_user_comercio&amp;quot;)\n        name_branch = &amp;quot;test_branch_&amp;quot; + str(faker.random_number(digits=3))\n        create_ = branch_create(token,name_branch)\n        body_create_ = create_.json()\n        branch_id = body_create_[&amp;quot;data&amp;quot;][&amp;quot;branch_id&amp;quot;]\n    \n        name_checkout = &amp;quot;test_caja_&amp;quot; + str(faker.random_number(digits=3))\n        create = checkout_create(token,name_checkout,branch_id)\n        body_create = create.json()\n        print(body_create)\n        checkout_id = body_create[&amp;quot;data&amp;quot;][&amp;quot;checkout_id&amp;quot;]\n    \n    \n        cuit_ = 30222333115\n        email_ = &amp;quot;pers_jur_pablo2@gmail.com&amp;quot;\n        password_ = &amp;quot;124578&amp;quot;\n        log_2= login_in_whit_email_comercio(cuit_,email_,password_)\n        token_ = log_2[&amp;quot;token&amp;quot;]\n    \n    \n        details = checkout_detail(token_,checkout_id)\n        body_detail = details.json()\n        print(body_detail)\n        status = body_detail[&amp;quot;status&amp;quot;]\n        if status == 200:\n&amp;gt;           self.fail(&amp;quot;Fallo el test, deja ver los details de otro usuarios&amp;quot;)\nE           AssertionError: Fallo el test, deja ver los details de otro usuarios\n\ntest_checkout.py:537: AssertionError\n\n------------------------------ Captured log call -------------------------------\nINFO     test_logger_commers:test_checkout.py:512 Runing test: test_can_get_details_to_other_user_comercio\n\n&#34;}], &#34;test_checkout.py::Checkout::test_can_get_details_to_other_user_monotribu&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;test_checkout.py::Checkout::test_can_get_details_to_other_user_monotribu&#34;, &#34;duration&#34;: &#34;00:00:04&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_checkout.py::Checkout::test_can_get_details_to_other_user_monotribu&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:04&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;test_checkout.Checkout testMethod=test_can_get_details_to_other_user_monotribu&amp;gt;\n\n    def test_can_get_details_to_other_user_monotribu(self):\n        email = &amp;quot;pers_fis_pablo2@gmail.com&amp;quot;\n        password = &amp;quot;124578&amp;quot;\n        log_1 = login_in_whit_email(email,password)\n        token = log_1[&amp;quot;token&amp;quot;]\n    \n        self.logger.info(&amp;quot;Runing test: test_can_get_details_to_other_user_monotribu&amp;quot;)\n        name_branch = &amp;quot;test_branch_&amp;quot; + str(faker.random_number(digits=3))\n        create_ = branch_create(token,name_branch)\n        body_create_ = create_.json()\n        branch_id = body_create_[&amp;quot;data&amp;quot;][&amp;quot;branch_id&amp;quot;]\n    \n        name_checkout = &amp;quot;test_caja_&amp;quot; + str(faker.random_number(digits=3))\n        create = checkout_create(token,name_checkout,branch_id)\n        body_create = create.json()\n        print(body_create)\n        checkout_id = body_create[&amp;quot;data&amp;quot;][&amp;quot;checkout_id&amp;quot;]\n    \n    \n    \n        email_ = &amp;quot;pers_fis_pablo1@gmail.com&amp;quot;\n        password_ = &amp;quot;124578&amp;quot;\n        log_2= login_in_whit_email(email_,password_)\n        token_ = log_2[&amp;quot;token&amp;quot;]\n    \n    \n        details = checkout_detail(token_,checkout_id)\n        body_detail = details.json()\n        print(body_detail)\n        status = body_detail[&amp;quot;status&amp;quot;]\n        if status == 200:\n&amp;gt;           self.fail(&amp;quot;Fallo el test, deja ver los details de otro usuarios monotributistas&amp;quot;)\nE           AssertionError: Fallo el test, deja ver los details de otro usuarios monotributistas\n\ntest_checkout.py:498: AssertionError\n\n------------------------------ Captured log call -------------------------------\nINFO     test_logger_commers:test_checkout.py:473 Runing test: test_can_get_details_to_other_user_monotribu\n\n&#34;}], &#34;test_checkout.py::Checkout::test_can_update_to_other_user_comercio&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;test_checkout.py::Checkout::test_can_update_to_other_user_comercio&#34;, &#34;duration&#34;: &#34;00:00:05&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_checkout.py::Checkout::test_can_update_to_other_user_comercio&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:05&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;test_checkout.Checkout testMethod=test_can_update_to_other_user_comercio&amp;gt;\n\n    def test_can_update_to_other_user_comercio(self):\n        cuit = 30112223335\n        email = &amp;quot;pers_jur_pablo1@gmail.com&amp;quot;\n        password = &amp;quot;124578&amp;quot;\n        log_1 = login_in_whit_email_comercio(cuit,email,password)\n        token = log_1[&amp;quot;token&amp;quot;]\n    \n        self.logger.info(&amp;quot;Runing test: test_can_update_to_other_user_comercio&amp;quot;)\n        name_branch = &amp;quot;test_branch_&amp;quot; + str(faker.random_number(digits=3))\n        create_ = branch_create(token,name_branch)\n        body_create_ = create_.json()\n        branch_id = body_create_[&amp;quot;data&amp;quot;][&amp;quot;branch_id&amp;quot;]\n    \n        name_checkout = &amp;quot;test_caja_&amp;quot; + str(faker.random_number(digits=3))\n        create = checkout_create(token,name_checkout,branch_id)\n        body_create = create.json()\n        print(body_create)\n        checkout_id = body_create[&amp;quot;data&amp;quot;][&amp;quot;checkout_id&amp;quot;]\n        name_db = Query_db.get_name_checkout_id(checkout_id)\n    \n        cuit_ = 30222333115\n        email_ = &amp;quot;pers_jur_pablo2@gmail.com&amp;quot;\n        password_ = &amp;quot;124578&amp;quot;\n        log_2= login_in_whit_email_comercio(cuit_,email_,password_)\n        token_ = log_2[&amp;quot;token&amp;quot;]\n    \n    \n        new_name_branch = &amp;quot;test_branch_upmono&amp;quot;\n        name_db = Query_db.get_checkout_info_with_name(checkout_id)\n        new_name_branch = &amp;quot;caja update mono&amp;quot;\n        update = checkout_update(token_,new_name_branch,checkout_id,branch_id)\n        body_update = update.json()\n        print(body_update)\n        name_update_db = Query_db.get_checkout_info_with_name(checkout_id)\n        self.logger.info(f&amp;quot;respose: {body_update}&amp;quot;)\n        status = body_update[&amp;quot;status&amp;quot;]\n        if status == 200:\n            self.assertIsNot(name_db,name_update_db)\n&amp;gt;           self.fail(&amp;quot;Fallo el test, deja ver los details de otro usuarios monotributistas&amp;quot;)\nE           AssertionError: Fallo el test, deja ver los details de otro usuarios monotributistas\n\ntest_checkout.py:624: AssertionError\n\n------------------------------ Captured log call -------------------------------\nINFO     test_logger_commers:test_checkout.py:593 Runing test: test_can_update_to_other_user_comercio\nINFO     test_logger_commers:test_checkout.py:620 respose: {&amp;#x27;status&amp;#x27;: 200, &amp;#x27;message&amp;#x27;: &amp;#x27;Checkout updated successfully.&amp;#x27;, &amp;#x27;data&amp;#x27;: {&amp;#x27;checkout_id&amp;#x27;: 287, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;caja update mono&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 330}}\n\n&#34;}], &#34;test_checkout.py::Checkout::test_can_update_to_other_user_monotribu&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;test_checkout.py::Checkout::test_can_update_to_other_user_monotribu&#34;, &#34;duration&#34;: &#34;00:00:05&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_checkout.py::Checkout::test_can_update_to_other_user_monotribu&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:05&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;test_checkout.Checkout testMethod=test_can_update_to_other_user_monotribu&amp;gt;\n\n    def test_can_update_to_other_user_monotribu(self):\n        email = &amp;quot;pers_fis_pablo2@gmail.com&amp;quot;\n        password = &amp;quot;124578&amp;quot;\n        log_1 = login_in_whit_email(email,password)\n        token = log_1[&amp;quot;token&amp;quot;]\n    \n        self.logger.info(&amp;quot;Runing test: test_can_update_to_other_user_monotribu&amp;quot;)\n        name_branch = &amp;quot;test_branch_&amp;quot; + str(faker.random_number(digits=3))\n        create_ = branch_create(token,name_branch)\n        body_create_ = create_.json()\n        branch_id = body_create_[&amp;quot;data&amp;quot;][&amp;quot;branch_id&amp;quot;]\n    \n        name_checkout = &amp;quot;test_caja_&amp;quot; + str(faker.random_number(digits=3))\n        create = checkout_create(token,name_checkout,branch_id)\n        body_create = create.json()\n        print(body_create)\n        checkout_id = body_create[&amp;quot;data&amp;quot;][&amp;quot;checkout_id&amp;quot;]\n        name_db = Query_db.get_name_checkout_id(checkout_id)\n    \n        email_ = &amp;quot;pers_fis_pablo1@gmail.com&amp;quot;\n        password_ = &amp;quot;124578&amp;quot;\n        log_2= login_in_whit_email(email_,password_)\n        token_ = log_2[&amp;quot;token&amp;quot;]\n    \n        new_name_branch = &amp;quot;caja update mono&amp;quot;\n        update = checkout_update(token_,new_name_branch,checkout_id,branch_id)\n    \n        name_update_db = Query_db.get_name_checkout_id(checkout_id)\n        body_update = update.json()\n        print(body_update)\n        self.logger.info(f&amp;quot;respose: {body_update}&amp;quot;)\n        status = body_update[&amp;quot;status&amp;quot;]\n        if status == 200:\n            self.assertIsNot(name_db,name_update_db)\n&amp;gt;           self.fail(&amp;quot;Fallo el test, deja ver los details de otro usuarios monotributistas&amp;quot;)\nE           AssertionError: Fallo el test, deja ver los details de otro usuarios monotributistas\n\ntest_checkout.py:580: AssertionError\n\n------------------------------ Captured log call -------------------------------\nINFO     test_logger_commers:test_checkout.py:552 Runing test: test_can_update_to_other_user_monotribu\nINFO     test_logger_commers:test_checkout.py:576 respose: {&amp;#x27;status&amp;#x27;: 200, &amp;#x27;message&amp;#x27;: &amp;#x27;Checkout updated successfully.&amp;#x27;, &amp;#x27;data&amp;#x27;: {&amp;#x27;checkout_id&amp;#x27;: 288, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;caja update mono&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 331}}\n\n&#34;}], &#34;test_checkout.py::Checkout::test_create_branch_with_name_exist&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;test_checkout.py::Checkout::test_create_branch_with_name_exist&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_checkout.py::Checkout::test_create_branch_with_name_exist&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;test_checkout.Checkout testMethod=test_create_branch_with_name_exist&amp;gt;\n\n    def test_create_branch_with_name_exist(self):\n        log = login_user()\n        token = log[&amp;quot;token&amp;quot;]\n    \n        self.logger.info(&amp;quot;Runing test: test_create_branch_with_name_exist&amp;quot;)\n    \n        name_branch = &amp;quot;test_branch_&amp;quot; + str(faker.random_number(digits=3))\n        create__ = branch_create(token,name_branch)\n        body_create__ = create__.json()\n        branch_id = body_create__[&amp;quot;data&amp;quot;][&amp;quot;branch_id&amp;quot;]\n    \n        name_checkout = &amp;quot;test_caja_&amp;quot; + str(faker.random_number(digits=3))\n        create = checkout_create(token,name_checkout,branch_id)\n        body_create = create.json()\n    \n    \n    \n        create_ = checkout_create(token,name_checkout,branch_id)\n        body_create_ = create_.json()\n        print(body_create_)\n        self.logger.info(f&amp;quot;response: {body_create}&amp;quot;)\n        if body_create_[&amp;quot;data&amp;quot;][&amp;quot;checkout_name&amp;quot;] == name_checkout:\n&amp;gt;           self.fail(&amp;quot;Se genero el user con un nombre de checkout existe&amp;quot;)\nE           AssertionError: Se genero el user con un nombre de checkout existe\n\ntest_checkout.py:277: AssertionError\n\n------------------------------ Captured log call -------------------------------\nINFO     test_logger_commers:test_checkout.py:259 Runing test: test_create_branch_with_name_exist\nINFO     test_logger_commers:test_checkout.py:275 response: {&amp;#x27;status&amp;#x27;: 201, &amp;#x27;message&amp;#x27;: &amp;#x27;Checkout created successfully.&amp;#x27;, &amp;#x27;data&amp;#x27;: {&amp;#x27;checkout_id&amp;#x27;: 290, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;test_caja_972&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 332}}\n\n&#34;}], &#34;test_checkout.py::Checkout::test_create_checkout&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_checkout.py::Checkout::test_create_checkout&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_checkout.py::Checkout::test_create_checkout&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     test_logger_commers:test_checkout.py:42 Running test: test_create_checkout\nINFO     test_logger_commers:test_checkout.py:53 response: {&amp;#x27;status&amp;#x27;: 201, &amp;#x27;message&amp;#x27;: &amp;#x27;Checkout created successfully.&amp;#x27;, &amp;#x27;data&amp;#x27;: {&amp;#x27;checkout_id&amp;#x27;: 292, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;test_caja_810&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 333}}\n\n&#34;}], &#34;test_checkout.py::Checkout::test_create_checkout_len_max_name&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_checkout.py::Checkout::test_create_checkout_len_max_name&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_checkout.py::Checkout::test_create_checkout_len_max_name&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     test_logger_commers:test_checkout.py:220 Runing test: test_create_checkout_len_max_name\nINFO     test_logger_commers:test_checkout.py:230 response: {&amp;#x27;code&amp;#x27;: 400, &amp;#x27;message&amp;#x27;: &amp;#x27;value too long for type character varying(20)\\n&amp;#x27;, &amp;#x27;status&amp;#x27;: {&amp;#x27;status_code&amp;#x27;: 400}, &amp;#x27;data&amp;#x27;: None}\n\n&#34;}], &#34;test_checkout.py::Checkout::test_create_checkout_len_min_name&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;test_checkout.py::Checkout::test_create_checkout_len_min_name&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_checkout.py::Checkout::test_create_checkout_len_min_name&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;test_checkout.Checkout testMethod=test_create_checkout_len_min_name&amp;gt;\n\n    def test_create_checkout_len_min_name(self):\n        log = login_user()\n        token = log[&amp;quot;token&amp;quot;]\n    \n        name_branch = &amp;quot;test_branch_&amp;quot; + str(faker.random_number(digits=3))\n        create_ = branch_create(token,name_branch)\n        body_create = create_.json()\n        branch_id = body_create[&amp;quot;data&amp;quot;][&amp;quot;branch_id&amp;quot;]\n    \n        name_branch = &amp;quot;&amp;quot;\n    \n        self.logger.info(&amp;quot;Runing test: test_create_branch_len_min_name&amp;quot;)\n    \n        create = checkout_create(token,name_branch,branch_id)\n        body_create = create.json()\n        print(body_create)\n        self.logger.info(f&amp;quot;response: {body_create}&amp;quot;)\n        code = body_create[&amp;quot;status&amp;quot;]\n&amp;gt;       self.assertEqual(code,400,&amp;quot;Se crea branch con name vacio&amp;quot;)\nE       AssertionError: 201 != 400 : Se crea branch con name vacio\n\ntest_checkout.py:252: AssertionError\n\n------------------------------ Captured log call -------------------------------\nINFO     test_logger_commers:test_checkout.py:245 Runing test: test_create_branch_len_min_name\nINFO     test_logger_commers:test_checkout.py:250 response: {&amp;#x27;status&amp;#x27;: 201, &amp;#x27;message&amp;#x27;: &amp;#x27;Checkout created successfully.&amp;#x27;, &amp;#x27;data&amp;#x27;: {&amp;#x27;checkout_id&amp;#x27;: 294, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 335}}\n\n&#34;}], &#34;test_checkout.py::Checkout::test_delete_checkout&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_checkout.py::Checkout::test_delete_checkout&#34;, &#34;duration&#34;: &#34;00:00:04&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_checkout.py::Checkout::test_delete_checkout&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:04&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     test_logger_commers:test_checkout.py:186 Running test: test_delete_branch\nINFO     test_logger_commers:test_checkout.py:202 response: {&amp;#x27;status&amp;#x27;: 200, &amp;#x27;message&amp;#x27;: &amp;#x27;Checkout deleted successfully.&amp;#x27;, &amp;#x27;data&amp;#x27;: None}\n\n&#34;}], &#34;test_checkout.py::Checkout::test_get_details_checkout&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_checkout.py::Checkout::test_get_details_checkout&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_checkout.py::Checkout::test_get_details_checkout&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     test_logger_commers:test_checkout.py:110 Runing test: test_get_details_checkout\nINFO     test_logger_commers:test_checkout.py:127 response: {&amp;#x27;status&amp;#x27;: 200, &amp;#x27;message&amp;#x27;: &amp;#x27;Checkout detail.&amp;#x27;, &amp;#x27;data&amp;#x27;: {&amp;#x27;checkout_id&amp;#x27;: 296, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;test_caja_476&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 337}}\n\n&#34;}], &#34;test_checkout.py::Checkout::test_get_list_checkout&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_checkout.py::Checkout::test_get_list_checkout&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_checkout.py::Checkout::test_get_list_checkout&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     test_logger_commers:test_checkout.py:85 Runing test: test_get_list_checkout\nINFO     test_logger_commers:test_checkout.py:90 response: {&amp;#x27;status&amp;#x27;: 200, &amp;#x27;message&amp;#x27;: &amp;#x27;Checkouts listed successfully.&amp;#x27;, &amp;#x27;data&amp;#x27;: [{&amp;#x27;checkout_id&amp;#x27;: 85, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;e701f063f1d34adab1bb10117d5769f9&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 83}, {&amp;#x27;checkout_id&amp;#x27;: 87, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;7fb41915e5b24ff7967bc0a7e1261982&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 84}, {&amp;#x27;checkout_id&amp;#x27;: 88, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;9662ee754ab948fd8e1210ea6b05cc6e&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 88}, {&amp;#x27;checkout_id&amp;#x27;: 89, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;a275d24577ee4a66936cabad85e61faa&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 89}, {&amp;#x27;checkout_id&amp;#x27;: 90, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;57b0c9f87c75459e85eaae0739d046bf&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 91}, {&amp;#x27;checkout_id&amp;#x27;: 97, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;74a2abbd5c0c4b65996275a27ae2750c&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 93}, {&amp;#x27;checkout_id&amp;#x27;: 98, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;da223e166dc24f72b5127e7c3531b6da&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 103}, {&amp;#x27;checkout_id&amp;#x27;: 99, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;ffb5fd049ae844d393fad4c3ba1b5086&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 105}, {&amp;#x27;checkout_id&amp;#x27;: 112, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;316a31fcebd94a05b4293a986f478ad3&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 107}, {&amp;#x27;checkout_id&amp;#x27;: 113, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;8ffe388da4e34372a14599b8be5ae380&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 129}, {&amp;#x27;checkout_id&amp;#x27;: 114, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;8c77b65614994a9f862b1b876de4310e&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 131}, {&amp;#x27;checkout_id&amp;#x27;: 115, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;29dfec0bf98f44a6a53f2554aede8052&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 135}, {&amp;#x27;checkout_id&amp;#x27;: 116, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;66dcf35754b14f3b9acb46a012a7b299&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 136}, {&amp;#x27;checkout_id&amp;#x27;: 117, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;7394fdf01aca447da0177fd338d8ac27&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 138}, {&amp;#x27;checkout_id&amp;#x27;: 128, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;5a127d4dd4614bef939c54bf613fe870&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 140}, {&amp;#x27;checkout_id&amp;#x27;: 129, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;6498e54121f441389367dd8ea3a63368&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 154}, {&amp;#x27;checkout_id&amp;#x27;: 130, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;3e82fa3122124cb593b7b3669abe1637&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 156}, {&amp;#x27;checkout_id&amp;#x27;: 141, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;bb48468f02704935b29f8b6c9c74d1ad&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 158}, {&amp;#x27;checkout_id&amp;#x27;: 142, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;6eeda36d1aac44ae86ab0576962825ac&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 172}, {&amp;#x27;checkout_id&amp;#x27;: 143, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;85a5e0381b9949989a25f6fbd64d9159&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 174}, {&amp;#x27;checkout_id&amp;#x27;: 152, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;1d2c80fd54fe40d0a54c5fa6276701df&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 176}, {&amp;#x27;checkout_id&amp;#x27;: 153, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;test_caja_25&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 189}, {&amp;#x27;checkout_id&amp;#x27;: 155, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;test_caja_85&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 191}, {&amp;#x27;checkout_id&amp;#x27;: 157, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;caja update mono&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 193}, {&amp;#x27;checkout_id&amp;#x27;: 170, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;test_caja_14&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 205}, {&amp;#x27;checkout_id&amp;#x27;: 171, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;test_caja_6&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 207}, {&amp;#x27;checkout_id&amp;#x27;: 176, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;test_caja_630&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 210}, {&amp;#x27;checkout_id&amp;#x27;: 178, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;test_caja_131&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 212}, {&amp;#x27;checkout_id&amp;#x27;: 180, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;caja update mono&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 214}, {&amp;#x27;checkout_id&amp;#x27;: 193, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;test_caja_553&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 226}, {&amp;#x27;checkout_id&amp;#x27;: 194, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;test_caja_70&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 227}, {&amp;#x27;checkout_id&amp;#x27;: 196, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;test_caja_519&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 229}, {&amp;#x27;checkout_id&amp;#x27;: 198, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;caja update mono&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 231}, {&amp;#x27;checkout_id&amp;#x27;: 222, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;test_caja_4&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 254}, {&amp;#x27;checkout_id&amp;#x27;: 224, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;test_caja_609&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 256}, {&amp;#x27;checkout_id&amp;#x27;: 226, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;caja update mono&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 258}, {&amp;#x27;checkout_id&amp;#x27;: 241, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;test_caja_414&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 272}, {&amp;#x27;checkout_id&amp;#x27;: 242, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;test_caja_597&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 273}, {&amp;#x27;checkout_id&amp;#x27;: 244, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;test_caja_210&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 275}, {&amp;#x27;checkout_id&amp;#x27;: 246, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;caja update mono&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 277}, {&amp;#x27;checkout_id&amp;#x27;: 261, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;test_caja_353&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 291}, {&amp;#x27;checkout_id&amp;#x27;: 262, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;84f903fc1aa841f29930c04bc9411c28&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 292}, {&amp;#x27;checkout_id&amp;#x27;: 263, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;89cbc030c59a41db9dde9d9a98164124&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 294}, {&amp;#x27;checkout_id&amp;#x27;: 271, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;108ecfa999ca4e29b0be25a6ca09bff3&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 296}, {&amp;#x27;checkout_id&amp;#x27;: 272, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;db23133bbe23412a8421a4295dd1af23&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 309}, {&amp;#x27;checkout_id&amp;#x27;: 273, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;e5901e0301044dcb92bb0e823fad6dc9&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 311}, {&amp;#x27;checkout_id&amp;#x27;: 282, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;Caja 1&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: &amp;#x27;bc837ac3dd804ac1b1793b8447afa531&amp;#x27;, &amp;#x27;branch_id&amp;#x27;: 313}, {&amp;#x27;checkout_id&amp;#x27;: 283, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;test_caja_100&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 326}, {&amp;#x27;checkout_id&amp;#x27;: 285, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;test_caja_45&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 328}, {&amp;#x27;checkout_id&amp;#x27;: 287, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;caja update mono&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 330}]}\n\n&#34;}], &#34;test_checkout.py::Checkout::test_get_list_user_delete&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_checkout.py::Checkout::test_get_list_user_delete&#34;, &#34;duration&#34;: &#34;00:00:05&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_checkout.py::Checkout::test_get_list_user_delete&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:05&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     test_logger_commers:test_checkout.py:318 Running test: test_update_name_branch\n\n&#34;}], &#34;test_checkout.py::Checkout::test_get_monotribu_details&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_checkout.py::Checkout::test_get_monotribu_details&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_checkout.py::Checkout::test_get_monotribu_details&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     test_logger_commers:test_checkout.py:453 response: {&amp;#x27;status&amp;#x27;: 200, &amp;#x27;message&amp;#x27;: &amp;#x27;Checkout detail.&amp;#x27;, &amp;#x27;data&amp;#x27;: {&amp;#x27;checkout_id&amp;#x27;: 298, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;test_caja_275&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 339}}\n\n&#34;}], &#34;test_checkout.py::Checkout::test_monotribu_create_checkout&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_checkout.py::Checkout::test_monotribu_create_checkout&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_checkout.py::Checkout::test_monotribu_create_checkout&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     test_logger_commers:test_checkout.py:348 Runing test: test_monotribu_create_checkout\nINFO     test_logger_commers:test_checkout.py:361 response: {&amp;#x27;status&amp;#x27;: 201, &amp;#x27;message&amp;#x27;: &amp;#x27;Checkout created successfully.&amp;#x27;, &amp;#x27;data&amp;#x27;: {&amp;#x27;checkout_id&amp;#x27;: 299, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;test_caja_47&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 340}}\n\n&#34;}], &#34;test_checkout.py::Checkout::test_monotribu_update_branch&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_checkout.py::Checkout::test_monotribu_update_branch&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_checkout.py::Checkout::test_monotribu_update_branch&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     test_logger_commers:test_checkout.py:394 Running test: test_monotribu_update_branch\nINFO     test_logger_commers:test_checkout.py:418 respose: {&amp;#x27;status&amp;#x27;: 200, &amp;#x27;message&amp;#x27;: &amp;#x27;Checkout updated successfully.&amp;#x27;, &amp;#x27;data&amp;#x27;: {&amp;#x27;checkout_id&amp;#x27;: 300, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;caja test630&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 341}}\n\n&#34;}], &#34;test_checkout.py::Checkout::test_update_name_checkout&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_checkout.py::Checkout::test_update_name_checkout&#34;, &#34;duration&#34;: &#34;00:00:04&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_checkout.py::Checkout::test_update_name_checkout&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:04&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     test_logger_commers:test_checkout.py:145 Running test: test_update_name_checkout\nINFO     test_logger_commers:test_checkout.py:169 respose: {&amp;#x27;status&amp;#x27;: 200, &amp;#x27;message&amp;#x27;: &amp;#x27;Checkout updated successfully.&amp;#x27;, &amp;#x27;data&amp;#x27;: {&amp;#x27;checkout_id&amp;#x27;: 301, &amp;#x27;checkout_name&amp;#x27;: &amp;#x27;caja test942&amp;#x27;, &amp;#x27;checkout_qr&amp;#x27;: None, &amp;#x27;branch_id&amp;#x27;: 342}}\n\n&#34;}], &#34;test_checkout.py::Checkout::test_update_user_delete&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_checkout.py::Checkout::test_update_user_delete&#34;, &#34;duration&#34;: &#34;00:00:05&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_checkout.py::Checkout::test_update_user_delete&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:05&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     test_logger_commers:test_checkout.py:289 Runing test: test_update_user_delete\n\n&#34;}]}, &#34;renderCollapsed&#34;: [&#34;passed&#34;], &#34;initialSort&#34;: &#34;result&#34;, &#34;title&#34;: &#34;reporte_checkout.html&#34;}"></div>
+    <script>
+      (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+const { getCollapsedCategory, setCollapsedIds } = require('./storage.js')
+
+class DataManager {
+    setManager(data) {
+        const collapsedCategories = [...getCollapsedCategory(data.renderCollapsed)]
+        const collapsedIds = []
+        const tests = Object.values(data.tests).flat().map((test, index) => {
+            const collapsed = collapsedCategories.includes(test.result.toLowerCase())
+            const id = `test_${index}`
+            if (collapsed) {
+                collapsedIds.push(id)
+            }
+            return {
+                ...test,
+                id,
+                collapsed,
+            }
+        })
+        const dataBlob = { ...data, tests }
+        this.data = { ...dataBlob }
+        this.renderData = { ...dataBlob }
+        setCollapsedIds(collapsedIds)
+    }
+
+    get allData() {
+        return { ...this.data }
+    }
+
+    resetRender() {
+        this.renderData = { ...this.data }
+    }
+
+    setRender(data) {
+        this.renderData.tests = [...data]
+    }
+
+    toggleCollapsedItem(id) {
+        this.renderData.tests = this.renderData.tests.map((test) =>
+            test.id === id ? { ...test, collapsed: !test.collapsed } : test,
+        )
+    }
+
+    set allCollapsed(collapsed) {
+        this.renderData = { ...this.renderData, tests: [...this.renderData.tests.map((test) => (
+            { ...test, collapsed }
+        ))] }
+    }
+
+    get testSubset() {
+        return [...this.renderData.tests]
+    }
+
+    get environment() {
+        return this.renderData.environment
+    }
+
+    get initialSort() {
+        return this.data.initialSort
+    }
+}
+
+module.exports = {
+    manager: new DataManager(),
+}
+
+},{"./storage.js":8}],2:[function(require,module,exports){
+const mediaViewer = require('./mediaviewer.js')
+const templateEnvRow = document.getElementById('template_environment_row')
+const templateResult = document.getElementById('template_results-table__tbody')
+
+function htmlToElements(html) {
+    const temp = document.createElement('template')
+    temp.innerHTML = html
+    return temp.content.childNodes
+}
+
+const find = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return elem.querySelector(selector)
+}
+
+const findAll = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return [...elem.querySelectorAll(selector)]
+}
+
+const dom = {
+    getStaticRow: (key, value) => {
+        const envRow = templateEnvRow.content.cloneNode(true)
+        const isObj = typeof value === 'object' && value !== null
+        const values = isObj ? Object.keys(value).map((k) => `${k}: ${value[k]}`) : null
+
+        const valuesElement = htmlToElements(
+            values ? `<ul>${values.map((val) => `<li>${val}</li>`).join('')}<ul>` : `<div>${value}</div>`)[0]
+        const td = findAll('td', envRow)
+        td[0].textContent = key
+        td[1].appendChild(valuesElement)
+
+        return envRow
+    },
+    getResultTBody: ({ testId, id, log, extras, resultsTableRow, tableHtml, result, collapsed }) => {
+        const resultBody = templateResult.content.cloneNode(true)
+        resultBody.querySelector('tbody').classList.add(result.toLowerCase())
+        resultBody.querySelector('tbody').id = testId
+        resultBody.querySelector('.collapsible').dataset.id = id
+
+        resultsTableRow.forEach((html) => {
+            const t = document.createElement('template')
+            t.innerHTML = html
+            resultBody.querySelector('.collapsible').appendChild(t.content)
+        })
+
+        if (log) {
+            // Wrap lines starting with "E" with span.error to color those lines red
+            const wrappedLog = log.replace(/^E.*$/gm, (match) => `<span class="error">${match}</span>`)
+            resultBody.querySelector('.log').innerHTML = wrappedLog
+        } else {
+            resultBody.querySelector('.log').remove()
+        }
+
+        if (collapsed) {
+            resultBody.querySelector('.collapsible > td')?.classList.add('collapsed')
+            resultBody.querySelector('.extras-row').classList.add('hidden')
+        } else {
+            resultBody.querySelector('.collapsible > td')?.classList.remove('collapsed')
+        }
+
+        const media = []
+        extras?.forEach(({ name, format_type, content }) => {
+            if (['image', 'video'].includes(format_type)) {
+                media.push({ path: content, name, format_type })
+            }
+
+            if (format_type === 'html') {
+                resultBody.querySelector('.extraHTML').insertAdjacentHTML('beforeend', `<div>${content}</div>`)
+            }
+        })
+        mediaViewer.setup(resultBody, media)
+
+        // Add custom html from the pytest_html_results_table_html hook
+        tableHtml?.forEach((item) => {
+            resultBody.querySelector('td[class="extra"]').insertAdjacentHTML('beforeend', item)
+        })
+
+        return resultBody
+    },
+}
+
+module.exports = {
+    dom,
+    htmlToElements,
+    find,
+    findAll,
+}
+
+},{"./mediaviewer.js":6}],3:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const storageModule = require('./storage.js')
+
+const getFilteredSubSet = (filter) =>
+    manager.allData.tests.filter(({ result }) => filter.includes(result.toLowerCase()))
+
+const doInitFilter = () => {
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+}
+
+const doFilter = (type, show) => {
+    if (show) {
+        storageModule.showCategory(type)
+    } else {
+        storageModule.hideCategory(type)
+    }
+
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+
+    const sortColumn = storageModule.getSort()
+    doSort(sortColumn, true)
+}
+
+module.exports = {
+    doFilter,
+    doInitFilter,
+}
+
+},{"./datamanager.js":1,"./sort.js":7,"./storage.js":8}],4:[function(require,module,exports){
+const { redraw, bindEvents, renderStatic } = require('./main.js')
+const { doInitFilter } = require('./filter.js')
+const { doInitSort } = require('./sort.js')
+const { manager } = require('./datamanager.js')
+const data = JSON.parse(document.getElementById('data-container').dataset.jsonblob)
+
+function init() {
+    manager.setManager(data)
+    doInitFilter()
+    doInitSort()
+    renderStatic()
+    redraw()
+    bindEvents()
+}
+
+init()
+
+},{"./datamanager.js":1,"./filter.js":3,"./main.js":5,"./sort.js":7}],5:[function(require,module,exports){
+const { dom, find, findAll } = require('./dom.js')
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const { doFilter } = require('./filter.js')
+const {
+    getVisible,
+    getCollapsedIds,
+    setCollapsedIds,
+    getSort,
+    getSortDirection,
+    possibleFilters,
+} = require('./storage.js')
+
+const removeChildren = (node) => {
+    while (node.firstChild) {
+        node.removeChild(node.firstChild)
+    }
+}
+
+const renderStatic = () => {
+    const renderEnvironmentTable = () => {
+        const environment = manager.environment
+        const rows = Object.keys(environment).map((key) => dom.getStaticRow(key, environment[key]))
+        const table = document.getElementById('environment')
+        removeChildren(table)
+        rows.forEach((row) => table.appendChild(row))
+    }
+    renderEnvironmentTable()
+}
+
+const addItemToggleListener = (elem) => {
+    elem.addEventListener('click', ({ target }) => {
+        const id = target.parentElement.dataset.id
+        manager.toggleCollapsedItem(id)
+
+        const collapsedIds = getCollapsedIds()
+        if (collapsedIds.includes(id)) {
+            const updated = collapsedIds.filter((item) => item !== id)
+            setCollapsedIds(updated)
+        } else {
+            collapsedIds.push(id)
+            setCollapsedIds(collapsedIds)
+        }
+        redraw()
+    })
+}
+
+const renderContent = (tests) => {
+    const sortAttr = getSort(manager.initialSort)
+    const sortAsc = JSON.parse(getSortDirection())
+    const rows = tests.map(dom.getResultTBody)
+    const table = document.getElementById('results-table')
+    const tableHeader = document.getElementById('results-table-head')
+
+    const newTable = document.createElement('table')
+    newTable.id = 'results-table'
+
+    // remove all sorting classes and set the relevant
+    findAll('.sortable', tableHeader).forEach((elem) => elem.classList.remove('asc', 'desc'))
+    tableHeader.querySelector(`.sortable[data-column-type="${sortAttr}"]`)?.classList.add(sortAsc ? 'desc' : 'asc')
+    newTable.appendChild(tableHeader)
+
+    if (!rows.length) {
+        const emptyTable = document.getElementById('template_results-table__body--empty').content.cloneNode(true)
+        newTable.appendChild(emptyTable)
+    } else {
+        rows.forEach((row) => {
+            if (!!row) {
+                findAll('.collapsible td:not(.col-links', row).forEach(addItemToggleListener)
+                find('.logexpander', row).addEventListener('click',
+                    (evt) => evt.target.parentNode.classList.toggle('expanded'),
+                )
+                newTable.appendChild(row)
+            }
+        })
+    }
+
+    table.replaceWith(newTable)
+}
+
+const renderDerived = () => {
+    const currentFilter = getVisible()
+    possibleFilters.forEach((result) => {
+        const input = document.querySelector(`input[data-test-result="${result}"]`)
+        input.checked = currentFilter.includes(result)
+    })
+}
+
+const bindEvents = () => {
+    const filterColumn = (evt) => {
+        const { target: element } = evt
+        const { testResult } = element.dataset
+
+        doFilter(testResult, element.checked)
+        const collapsedIds = getCollapsedIds()
+        const updated = manager.renderData.tests.map((test) => {
+            return {
+                ...test,
+                collapsed: collapsedIds.includes(test.id),
+            }
+        })
+        manager.setRender(updated)
+        redraw()
+    }
+
+    const header = document.getElementById('environment-header')
+    header.addEventListener('click', () => {
+        const table = document.getElementById('environment')
+        table.classList.toggle('hidden')
+        header.classList.toggle('collapsed')
+    })
+
+    findAll('input[name="filter_checkbox"]').forEach((elem) => {
+        elem.addEventListener('click', filterColumn)
+    })
+
+    findAll('.sortable').forEach((elem) => {
+        elem.addEventListener('click', (evt) => {
+            const { target: element } = evt
+            const { columnType } = element.dataset
+            doSort(columnType)
+            redraw()
+        })
+    })
+
+    document.getElementById('show_all_details').addEventListener('click', () => {
+        manager.allCollapsed = false
+        setCollapsedIds([])
+        redraw()
+    })
+    document.getElementById('hide_all_details').addEventListener('click', () => {
+        manager.allCollapsed = true
+        const allIds = manager.renderData.tests.map((test) => test.id)
+        setCollapsedIds(allIds)
+        redraw()
+    })
+}
+
+const redraw = () => {
+    const { testSubset } = manager
+
+    renderContent(testSubset)
+    renderDerived()
+}
+
+module.exports = {
+    redraw,
+    bindEvents,
+    renderStatic,
+}
+
+},{"./datamanager.js":1,"./dom.js":2,"./filter.js":3,"./sort.js":7,"./storage.js":8}],6:[function(require,module,exports){
+class MediaViewer {
+    constructor(assets) {
+        this.assets = assets
+        this.index = 0
+    }
+
+    nextActive() {
+        this.index = this.index === this.assets.length - 1 ? 0 : this.index + 1
+        return [this.activeFile, this.index]
+    }
+
+    prevActive() {
+        this.index = this.index === 0 ? this.assets.length - 1 : this.index -1
+        return [this.activeFile, this.index]
+    }
+
+    get currentIndex() {
+        return this.index
+    }
+
+    get activeFile() {
+        return this.assets[this.index]
+    }
+}
+
+
+const setup = (resultBody, assets) => {
+    if (!assets.length) {
+        resultBody.querySelector('.media').classList.add('hidden')
+        return
+    }
+
+    const mediaViewer = new MediaViewer(assets)
+    const container = resultBody.querySelector('.media-container')
+    const leftArrow = resultBody.querySelector('.media-container__nav--left')
+    const rightArrow = resultBody.querySelector('.media-container__nav--right')
+    const mediaName = resultBody.querySelector('.media__name')
+    const counter = resultBody.querySelector('.media__counter')
+    const imageEl = resultBody.querySelector('img')
+    const sourceEl = resultBody.querySelector('source')
+    const videoEl = resultBody.querySelector('video')
+
+    const setImg = (media, index) => {
+        if (media?.format_type === 'image') {
+            imageEl.src = media.path
+
+            imageEl.classList.remove('hidden')
+            videoEl.classList.add('hidden')
+        } else if (media?.format_type === 'video') {
+            sourceEl.src = media.path
+
+            videoEl.classList.remove('hidden')
+            imageEl.classList.add('hidden')
+        }
+
+        mediaName.innerText = media?.name
+        counter.innerText = `${index + 1} / ${assets.length}`
+    }
+    setImg(mediaViewer.activeFile, mediaViewer.currentIndex)
+
+    const moveLeft = () => {
+        const [media, index] = mediaViewer.prevActive()
+        setImg(media, index)
+    }
+    const doRight = () => {
+        const [media, index] = mediaViewer.nextActive()
+        setImg(media, index)
+    }
+    const openImg = () => {
+        window.open(mediaViewer.activeFile.path, '_blank')
+    }
+    if (assets.length === 1) {
+        container.classList.add('media-container--fullscreen')
+    } else {
+        leftArrow.addEventListener('click', moveLeft)
+        rightArrow.addEventListener('click', doRight)
+    }
+    imageEl.addEventListener('click', openImg)
+}
+
+module.exports = {
+    setup,
+}
+
+},{}],7:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const storageModule = require('./storage.js')
+
+const genericSort = (list, key, ascending, customOrder) => {
+    let sorted
+    if (customOrder) {
+        sorted = list.sort((a, b) => {
+            const aValue = a.result.toLowerCase()
+            const bValue = b.result.toLowerCase()
+
+            const aIndex = customOrder.findIndex((item) => item.toLowerCase() === aValue)
+            const bIndex = customOrder.findIndex((item) => item.toLowerCase() === bValue)
+
+            // Compare the indices to determine the sort order
+            return aIndex - bIndex
+        })
+    } else {
+        sorted = list.sort((a, b) => a[key] === b[key] ? 0 : a[key] > b[key] ? 1 : -1)
+    }
+
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const durationSort = (list, ascending) => {
+    const parseDuration = (duration) => {
+        if (duration.includes(':')) {
+            // If it's in the format "HH:mm:ss"
+            const [hours, minutes, seconds] = duration.split(':').map(Number)
+            return (hours * 3600 + minutes * 60 + seconds) * 1000
+        } else {
+            // If it's in the format "nnn ms"
+            return parseInt(duration)
+        }
+    }
+    const sorted = list.sort((a, b) => parseDuration(a['duration']) - parseDuration(b['duration']))
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const doInitSort = () => {
+    const type = storageModule.getSort(manager.initialSort)
+    const ascending = storageModule.getSortDirection()
+    const list = manager.testSubset
+    const initialOrder = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed', 'Skipped', 'Passed']
+
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+
+    if (type?.toLowerCase() === 'original') {
+        manager.setRender(list)
+    } else {
+        let sortedList
+        switch (type) {
+        case 'duration':
+            sortedList = durationSort(list, ascending)
+            break
+        case 'result':
+            sortedList = genericSort(list, type, ascending, initialOrder)
+            break
+        default:
+            sortedList = genericSort(list, type, ascending)
+            break
+        }
+        manager.setRender(sortedList)
+    }
+}
+
+const doSort = (type, skipDirection) => {
+    const newSortType = storageModule.getSort(manager.initialSort) !== type
+    const currentAsc = storageModule.getSortDirection()
+    let ascending
+    if (skipDirection) {
+        ascending = currentAsc
+    } else {
+        ascending = newSortType ? false : !currentAsc
+    }
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+
+    const list = manager.testSubset
+    const sortedList = type === 'duration' ? durationSort(list, ascending) : genericSort(list, type, ascending)
+    manager.setRender(sortedList)
+}
+
+module.exports = {
+    doInitSort,
+    doSort,
+}
+
+},{"./datamanager.js":1,"./storage.js":8}],8:[function(require,module,exports){
+const possibleFilters = [
+    'passed',
+    'skipped',
+    'failed',
+    'error',
+    'xfailed',
+    'xpassed',
+    'rerun',
+]
+
+const getVisible = () => {
+    const url = new URL(window.location.href)
+    const settings = new URLSearchParams(url.search).get('visible')
+    const lower = (item) => {
+        const lowerItem = item.toLowerCase()
+        if (possibleFilters.includes(lowerItem)) {
+            return lowerItem
+        }
+        return null
+    }
+    return settings === null ?
+        possibleFilters :
+        [...new Set(settings?.split(',').map(lower).filter((item) => item))]
+}
+
+const hideCategory = (categoryToHide) => {
+    const url = new URL(window.location.href)
+    const visibleParams = new URLSearchParams(url.search).get('visible')
+    const currentVisible = visibleParams ? visibleParams.split(',') : [...possibleFilters]
+    const settings = [...new Set(currentVisible)].filter((f) => f !== categoryToHide).join(',')
+
+    url.searchParams.set('visible', settings)
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const showCategory = (categoryToShow) => {
+    if (typeof window === 'undefined') {
+        return
+    }
+    const url = new URL(window.location.href)
+    const currentVisible = new URLSearchParams(url.search).get('visible')?.split(',').filter(Boolean) ||
+        [...possibleFilters]
+    const settings = [...new Set([categoryToShow, ...currentVisible])]
+    const noFilter = possibleFilters.length === settings.length || !settings.length
+
+    noFilter ? url.searchParams.delete('visible') : url.searchParams.set('visible', settings.join(','))
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const getSort = (initialSort) => {
+    const url = new URL(window.location.href)
+    let sort = new URLSearchParams(url.search).get('sort')
+    if (!sort) {
+        sort = initialSort || 'result'
+    }
+    return sort
+}
+
+const setSort = (type) => {
+    const url = new URL(window.location.href)
+    url.searchParams.set('sort', type)
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const getCollapsedCategory = (renderCollapsed) => {
+    let categories
+    if (typeof window !== 'undefined') {
+        const url = new URL(window.location.href)
+        const collapsedItems = new URLSearchParams(url.search).get('collapsed')
+        switch (true) {
+        case !renderCollapsed && collapsedItems === null:
+            categories = ['passed']
+            break
+        case collapsedItems?.length === 0 || /^["']{2}$/.test(collapsedItems):
+            categories = []
+            break
+        case /^all$/.test(collapsedItems) || collapsedItems === null && /^all$/.test(renderCollapsed):
+            categories = [...possibleFilters]
+            break
+        default:
+            categories = collapsedItems?.split(',').map((item) => item.toLowerCase()) || renderCollapsed
+            break
+        }
+    } else {
+        categories = []
+    }
+    return categories
+}
+
+const getSortDirection = () => JSON.parse(sessionStorage.getItem('sortAsc')) || false
+const setSortDirection = (ascending) => sessionStorage.setItem('sortAsc', ascending)
+
+const getCollapsedIds = () => JSON.parse(sessionStorage.getItem('collapsedIds')) || []
+const setCollapsedIds = (list) => sessionStorage.setItem('collapsedIds', JSON.stringify(list))
+
+module.exports = {
+    getVisible,
+    hideCategory,
+    showCategory,
+    getCollapsedIds,
+    setCollapsedIds,
+    getSort,
+    setSort,
+    getSortDirection,
+    setSortDirection,
+    getCollapsedCategory,
+    possibleFilters,
+}
+
+},{}]},{},[4]);
+    </script>
+  </footer>
+</html>
