@@ -7,7 +7,7 @@ import requests
 
 def code_base64_front_dni():
 # Ruta de la imagen
-    image_path = '/home/pablopalacios/code/movilcash_backend/automation/tests/dev_v2/fotos_thales/dni_frente_2_correctp.png'
+    image_path = ''
 
 
     # #Leer la imagen en modo binario
@@ -23,7 +23,7 @@ def code_base64_front_dni():
 
 def code_base64_back_dni():
 # Ruta de la imagen
-    image_path = '/home/pablopalacios/code/movilcash_backend/automation/tests/dev_v2/fotos_thales/dorso_3.jpeg'
+    image_path = ''
 
     # Leer la imagen en modo binario
     with open(image_path, 'rb') as image_file:
@@ -41,7 +41,7 @@ def code_base64_back_dni():
 
 def code_base64_face_img():
 # Ruta de la imagen
-    image_path = '/home/pablopalacios/code/movilcash_backend/automation/tests/dev_v2/fotos_thales/foto_4.png'
+    image_path = ''
 
     # # Leer la imagen en modo binario
     with open(image_path, 'rb') as image_file:

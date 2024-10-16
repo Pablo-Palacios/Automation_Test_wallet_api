@@ -1,0 +1,51 @@
+2024-10-07 12:56:37,176 - test_logger - INFO - Test running: test_login_comercio
+2024-10-07 12:56:37,847 - test_logger - INFO - response: {'code': 400, 'message': 'InvalidCredentialsException: Invalid credentials', 'status': {'status_code': 400}, 'data': None}
+2024-10-10 10:34:54,462 - test_logger - INFO - Test running: test_login_comercio
+2024-10-10 10:34:55,353 - test_logger - INFO - response: {'code': 400, 'message': 'InvalidCredentialsException: Invalid credentials', 'status': {'status_code': 400}, 'data': None}
+2024-10-10 10:39:27,755 - test_logger - INFO - Test running: test_login_comercio
+2024-10-10 10:39:28,369 - test_logger - INFO - response: {'code': 400, 'message': 'InvalidCredentialsException: Invalid credentials', 'status': {'status_code': 400}, 'data': None}
+2024-10-10 10:49:46,248 - test_logger - INFO - Test running: test_login_comercio
+2024-10-10 10:49:50,606 - test_logger - INFO - response: {'code': 400, 'message': "ValidationError: 1 validation error for CommerceSchema\ncvu\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='generar', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.8/v/int_parsing", 'status': {'status_code': 400}, 'data': None}
+2024-10-10 10:52:22,305 - test_logger - INFO - Test running: test_login_comercio
+2024-10-10 10:52:23,487 - test_logger - INFO - response: {'code': 400, 'message': "ValidationError: 1 validation error for CommerceSchema\ncvu\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='generar', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.8/v/int_parsing", 'status': {'status_code': 400}, 'data': None}
+2024-10-10 11:04:07,774 - test_logger - INFO - Test running: test_login_comercio
+2024-10-10 11:04:08,965 - test_logger - INFO - response: {'code': 400, 'message': "ValidationError: 1 validation error for CommerceSchema\ncvu\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='generar', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.8/v/int_parsing", 'status': {'status_code': 400}, 'data': None}
+2024-10-10 11:53:52,006 - test_logger - INFO - Test running: test_login_comercio
+2024-10-10 11:53:56,864 - test_logger - INFO - response: {'code': 200, 'message': 'Login successful', 'status': {'status_code': 200}, 'data': {'client': {'client_id': 0, 'user_id': 57, 'document_number': 0, 'cuil': 30222333115, 'name': 'Comercio persona juridica 2', 'cvu': '1700000000000605', 'is_legal_person': True, 'alias': None, 'commerce_id': 62, 'balance_id': 200066, 'last_name': None, 'birth_date': None, 'commerce': None, 'role': 'admin', 'representative_id': 1}, 'commerce': {'commerce_id': 62, 'commercial_name': 'Comercio persona juridica 2', 'cuit': 30222333115, 'cvu': 1700000000000605, 'alias': None, 'balance_id': 200066, 'commercial_activity_afip': '9700', 'branches': []}, 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mjg1NzU2MzYsInV1aWQiOiI1OTRiNDIyMjhmMmY0NGM4ODJlNGIwMzA1YzkwMzhiYiJ9.psstlgP_2rxYAMnt_X8HlxmtYP5e6-8W0egfV-6OO2A', 'refreshToken': None}}
+2024-10-10 13:07:41,405 - test_logger - INFO - Test running: test_login_comercio
+2024-10-10 13:07:41,968 - test_logger - INFO - response: {'code': 400, 'message': 'InvalidCredentialsException: Invalid credentials', 'status': {'status_code': 400}, 'data': None}
+2024-10-10 13:10:47,768 - test_logger - INFO - Test running: test_login_comercio
+2024-10-10 13:10:48,525 - test_logger - INFO - response: {'code': 400, 'message': 'InvalidCredentialsException: Invalid credentials', 'status': {'status_code': 400}, 'data': None}
+2024-10-10 13:13:41,037 - test_logger - INFO - Test running: test_login_comercio
+2024-10-10 13:13:41,601 - test_logger - INFO - response: {'code': 400, 'message': 'InvalidCredentialsException: Invalid credentials', 'status': {'status_code': 400}, 'data': None}
+2024-10-10 13:38:21,033 - test_logger - INFO - Test running: test_login_comercio
+2024-10-10 13:38:22,433 - test_logger - INFO - response: {'code': 200, 'message': 'Login successful', 'status': {'status_code': 200}, 'data': {'client': {'client_id': 0, 'user_id': 322, 'document_number': 0, 'cuil': 30715699415, 'name': 'Siempre Onda - Banco Formosa', 'cvu': '1700000000003221', 'is_legal_person': True, 'alias': None, 'commerce_id': 322, 'balance_id': 324, 'last_name': None, 'birth_date': None, 'commerce': None, 'role': 'admin', 'representative_id': 95}, 'commerce': {'commerce_id': 322, 'commercial_name': 'Siempre Onda - Banco Formosa', 'cuit': 30715699415, 'cvu': 1700000000003221, 'alias': None, 'balance_id': 324, 'commercial_activity_afip': '9700', 'branches': []}, 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mjg1ODE5MDIsInV1aWQiOiI0ZWYyN2ZlMDI3Y2I0ZGViYWMwYzFjNTZkNzVmYmJkOSJ9.l_H_BxjPR2zlGNHq9guq8onOYnheJ3qr-DMpHZwdjRE', 'refreshToken': None}}
+2024-10-12 12:20:39,314 - test_logger - INFO - Test running: test_login_comercio
+2024-10-12 12:21:18,226 - test_logger - INFO - Test running: test_login_comercio
+2024-10-12 12:21:22,484 - test_logger - INFO - response: {'code': 400, 'message': 'PendingApprovalException: Pending approval', 'status': {'status_code': 400}, 'data': None}
+2024-10-12 12:22:32,158 - test_logger - INFO - Test running: test_login_comercio
+2024-10-12 12:22:35,804 - test_logger - INFO - response: {'code': 400, 'message': 'EmailNotSentException: Email not sent', 'status': {'status_code': 400}, 'data': None}
+2024-10-12 12:26:17,807 - test_logger - INFO - Test running: test_login_comercio
+2024-10-12 12:26:19,332 - test_logger - INFO - response: {'code': 400, 'message': 'PendingApprovalException: Pending approval', 'status': {'status_code': 400}, 'data': None}
+2024-10-12 12:34:17,923 - test_logger - INFO - Test running: test_login_comercio
+2024-10-12 12:34:19,132 - test_logger - INFO - response: {'code': 400, 'message': 'PendingApprovalException: Pending approval', 'status': {'status_code': 400}, 'data': None}
+2024-10-12 12:36:08,914 - test_logger - INFO - Test running: test_login_comercio
+2024-10-12 12:36:13,198 - test_logger - INFO - response: {'code': 401, 'message': 'OTP Required', 'status': {'status_code': 401}, 'data': None}
+2024-10-12 12:36:37,810 - test_logger - INFO - Test running: test_login_comercio
+2024-10-12 12:36:41,970 - test_logger - INFO - response: {'code': 401, 'message': 'OTP Required', 'status': {'status_code': 401}, 'data': None}
+2024-10-12 12:39:51,552 - test_logger - INFO - Test running: test_login_comercio
+2024-10-12 12:40:23,598 - test_logger - INFO - Test running: test_login_comercio
+2024-10-12 12:40:30,007 - test_logger - INFO - response: {'code': 401, 'message': 'OTP Required', 'status': {'status_code': 401}, 'data': None}
+2024-10-12 12:44:46,379 - test_logger - INFO - Test running: test_login_comercio
+2024-10-12 12:45:33,019 - test_logger - INFO - Test running: test_login_comercio
+2024-10-12 12:45:42,527 - test_logger - INFO - response: {'code': 401, 'message': 'OTP Required', 'status': {'status_code': 401}, 'data': None}
+2024-10-12 12:51:30,991 - test_logger - INFO - Test running: test_login_comercio
+2024-10-12 12:51:37,315 - test_logger - INFO - response: {'code': 401, 'message': 'OTP Required', 'status': {'status_code': 401}, 'data': None}
+2024-10-12 12:53:21,589 - test_logger - INFO - Test running: test_login_comercio
+2024-10-12 12:53:27,885 - test_logger - INFO - response: {'code': 401, 'message': 'OTP Required', 'status': {'status_code': 401}, 'data': None}
+2024-10-12 12:54:47,094 - test_logger - INFO - Test running: test_login_comercio
+2024-10-12 12:54:53,083 - test_logger - INFO - response: {'code': 401, 'message': 'OTP Required', 'status': {'status_code': 401}, 'data': None}
+2024-10-12 12:55:43,299 - test_logger - INFO - Test running: test_login_comercio
+2024-10-12 12:55:49,099 - test_logger - INFO - response: {'code': 401, 'message': 'OTP Required', 'status': {'status_code': 401}, 'data': None}
+2024-10-12 13:05:33,010 - test_logger - INFO - Test running: test_login_comercio
+2024-10-12 13:05:33,614 - test_logger - INFO - response: {'code': 400, 'message': 'InvalidCredentialsException: Invalid credentials', 'status': {'status_code': 400}, 'data': None}
