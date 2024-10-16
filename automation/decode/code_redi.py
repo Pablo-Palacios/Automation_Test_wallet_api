@@ -1,16 +1,15 @@
 import pickle
 import redis
-from dotenv import load_dotenv
 import os
 
-load_dotenv()
+
 
 
 class Redis:
     def validacion(device_id):
 
         def get_otp_code(device_id):
-            connection_string = os.getenv('REDIS_')
+            connection_string = ('REDIS_')
             key = f"user_validation:{device_id}"
 
             redi = redis.Redis.from_url(connection_string)

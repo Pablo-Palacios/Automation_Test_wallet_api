@@ -15,7 +15,7 @@ cuit = int("20" + str(faker.random_number(digits=8)) + "1")
 #phone = int("54351" + str(faker.random_number(digits=7)))
 phone = int("351" + str(faker.random_number(digits=6)) + "1")
 #phone = "543516619221"
-password = "Pablo123"
+password = "*******"
 
 
 

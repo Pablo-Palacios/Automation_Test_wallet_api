@@ -1,8 +1,12 @@
-from views import login, search_user_coelsa_with_alias, search_user_onda_email, search_user_coelsa_with_cvu,get_profile,search_user_onda_phone
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+from configuracion.views_persona import login, search_user_coelsa_with_alias, search_user_onda_email, search_user_coelsa_with_cvu,get_profile,search_user_onda_phone
 from unittest import TestCase
-from automation.database.config import Query_db
+from configuracion.config import Query_db
 from faker import Faker
-from automation.lib.main import password
+from configuracion.main import password
+from configuracion.lib import cbu_random
 
 
 faker = Faker()
@@ -11,7 +15,8 @@ device_id = ""
 
 # LOGIN 
 def login_in():
-        email_last = Query_db.get_last_email_client() 
+        email_last = "*******"
+        #email_last = 'brianmedinadev@movilcash.com'
         login_user = login(email_last, password)
         response_login = login_user.json()
         
@@ -65,7 +70,6 @@ class UserOnda(TestCase):
                 self.assertEqual(code, 200, "No se encontro al user")
 
     def test_search_user_onda_phone(self):
-
         login_data = login_in()
         token = login_data["token"]
         email= login_data["email"]
@@ -95,7 +99,7 @@ class UserOnda(TestCase):
 
         request_get_profile = get_profile(token)
         body_profile = request_get_profile.json()
-        #print(body_profile)
+        print(body_profile)
         for item in body_profile:
             if item and 'response' in item:
                 response = item["response"]
@@ -109,12 +113,10 @@ class UserOnda(TestCase):
     def test_search_alias_coelsa(self):
         login_data = login_in()
         token = login_data["token"]
-        #alias = login_data["alias"]
+        alias = login_data["alias"]
         email = login_data["email"]
-        alias = "NEw.Helen.84"
-
-
-        
+        #cb = cbu_random()
+        alias = "Javier.Sabag.2024"        
 
         search_coelsa_alias = search_user_coelsa_with_alias(token, alias)
         response_search_coelsa_alias = search_coelsa_alias.json()
@@ -143,11 +145,13 @@ class UserOnda(TestCase):
     def test_search_cvu_coelsa(self):
         login_data = login_in()
         token = login_data["token"]
-        cvu = login_data["cvu"] 
+        cvu = login_data["cvu"]
         email = login_data["email"]
+        #cbu_data = cbu_random()
+        #cvu = cbu_data["cbu"]
+        #cvu = "0720500288000001534218"
 
-
-        #print(cvu)
+        print(cvu)
         search_coelsa_cvu = search_user_coelsa_with_cvu(token, cvu)
         response_search_coelsa_cvu = search_coelsa_cvu.json()
         print(response_search_coelsa_cvu)
@@ -171,6 +175,36 @@ class UserOnda(TestCase):
                     # print(owner)
                     print(found_cvu)
                     print(found_alias)
+
+    
+    def test_search_fail_cvu_coelsa(self):
+        login_data = login_in()
+        token = login_data["token"]
+        #cvu = login_data["cvu"]
+        email = login_data["email"]
+        #cbu_data = cbu_random()
+        #cvu = cbu_data["cbu"]
+        cvu = "0720500288000001534222"
+
+        search_coelsa_cvu = search_user_coelsa_with_cvu(token, cvu)
+        response_search_coelsa_cvu = search_coelsa_cvu.json()
+        print(response_search_coelsa_cvu)
+        self.assertEqual(search_coelsa_cvu.status_code, 400,f"Status difirente: {search_coelsa_cvu.status_code}")
+
+    def test_search_fail_cvu_coelsa(self):
+        login_data = login_in()
+        token = login_data["token"]
+        #cvu = login_data["cvu"]
+        email = login_data["email"]
+        #cbu_data = cbu_random()
+        #cvu = cbu_data["cbu"]
+        alias = "Sabag.2024"
+
+        search_coelsa_alias = search_user_coelsa_with_alias(token, alias)
+        response_search_coelsa_cvu = search_coelsa_alias.json()
+        print(response_search_coelsa_cvu)
+        self.assertEqual(search_coelsa_alias.status_code, 406,f"Status difirente: {search_coelsa_alias.status_code}")
+
         
 
 
